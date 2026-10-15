@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpie12xredaa"]
+
+[ext_resource type="Texture2D" uid="uid://dqjxvn57amsfb" path="res://assets/Images/Environment/SeaOfSorrow-civilised/music_box_reward_pillar0008.png" id="1_b4vp3"]
+
+[node name="inverse_music_box_reward_pillar_0008" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_b4vp3")
+flip_v = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-67, -66, 68, -66, 68, -17, 54, 22, 0, 51, -51, 26, -67, -19)

@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://ctpbskd618dwi"]
+
+[ext_resource type="Texture2D" uid="uid://cbu8pe30t2rme" path="res://assets/Images/Environment/SeaOfSorrow-civilised/song_pressure_plate_small_0001_1.png" id="1_bocq1"]
+[ext_resource type="Texture2D" uid="uid://ciwiq4ladmbu4" path="res://assets/Images/Environment/SeaOfSorrow-civilised/song_pressure_plate_small_0000_2.png" id="2_pej36"]
+[ext_resource type="Texture2D" uid="uid://cfukw3oheelra" path="res://assets/Images/Environment/SeaOfSorrow-civilised/song_pressure_plate_small_0001_1_emission_blurred.png" id="2_pyg3x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bocq1"]
+size = Vector2(450, 60)
+
+[node name="triplefloor" type="StaticBody2D"]
+
+[node name="SongPressurePlateSmall00002" type="Sprite2D" parent="."]
+position = Vector2(0, -5)
+texture = ExtResource("1_bocq1")
+
+[node name="PointLight2D1" type="PointLight2D" parent="SongPressurePlateSmall00002"]
+energy = 4.43
+texture = ExtResource("2_pyg3x")
+
+[node name="PointLight2D2" type="PointLight2D" parent="SongPressurePlateSmall00002"]
+color = Color(1, 0.948233, 0.769568, 1)
+energy = 3.0
+range_item_cull_mask = 6
+texture = ExtResource("2_pyg3x")
+texture_scale = 3.0
+
+[node name="PointLight2D3-particlesonly" type="PointLight2D" parent="SongPressurePlateSmall00002"]
+color = Color(1, 0.948233, 0.769568, 1)
+energy = 5.0
+range_item_cull_mask = 4
+texture = ExtResource("2_pyg3x")
+texture_scale = 3.0
+
+[node name="SongPressurePlateSmall00003" type="Sprite2D" parent="."]
+position = Vector2(-150, 0)
+texture = ExtResource("2_pej36")
+flip_h = true
+
+[node name="SongPressurePlateSmall00001" type="Sprite2D" parent="."]
+position = Vector2(145, 0)
+texture = ExtResource("2_pej36")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 7
+shape = SubResource("RectangleShape2D_bocq1")

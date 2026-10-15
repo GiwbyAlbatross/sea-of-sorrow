@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2wkp6mb5h6kk"]
+
+[ext_resource type="Texture2D" uid="uid://0wpqq2e1nfks" path="res://assets/Images/Environment/SeaOfSorrow/pink-coral_set_0003_1.png" id="1_aahte"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eko48"]
+size = Vector2(200, 29)
+
+[node name="PinkCoralFloor" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_aahte")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -4.5)
+shape = SubResource("RectangleShape2D_eko48")

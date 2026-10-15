@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7pecs3f3srw7"]
+
+[ext_resource type="Texture2D" uid="uid://cuu45jl6y3hy7" path="res://assets/Images/Environment/SeaOfSorrow/Crust_Tree_plat_small0004.png" id="1_u8gd0"]
+[ext_resource type="Script" uid="uid://d2g4ktnsniua8" path="res://scripts/damaging_area_2d.gd" id="2_e6o68"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q7tm"]
+size = Vector2(160, 20)
+
+[node name="SpikyPlatformSmall" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_u8gd0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -40)
+shape = SubResource("RectangleShape2D_8q7tm")
+
+[node name="hurty" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("2_e6o68")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="hurty"]
+polygon = PackedVector2Array(-76, -33, 75, -33, 64, 1, 8, 39, -55, 9)

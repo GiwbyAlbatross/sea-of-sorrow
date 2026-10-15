@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://duotlclhiymc2"]
+
+[ext_resource type="Texture2D" uid="uid://bhm3gm5yq4nbi" path="res://assets/Images/Environment/SeaOfSorrow-civilised/dock_pipe__0013_lamp.png" id="1_j1nsl"]
+[ext_resource type="Script" uid="uid://bxqmb5v6mdh6" path="res://scripts/better_parallax.gd" id="2_38odu"]
+[ext_resource type="PackedScene" uid="uid://clvkwmein1ern" path="res://silkfly.tscn" id="3_swno1"]
+[ext_resource type="Texture2D" uid="uid://befji8ehn8k" path="res://assets/Images/grimm_fader.png" id="4_lw0xs"]
+
+[node name="DockPipe0013Lamp" type="Sprite2D"]
+texture = ExtResource("1_j1nsl")
+script = ExtResource("2_38odu")
+scroll_scale = Vector2(0.96, 1)
+
+[node name="silkfly" parent="." instance=ExtResource("3_swno1")]
+position = Vector2(0, 20)
+scale = Vector2(1.5, 1.5)
+frame_progress = 0.885632
+
+[node name="dustlamp" type="PointLight2D" parent="."]
+position = Vector2(0, 20)
+color = Color(1, 0.984314, 0.85098, 1)
+energy = 16.0
+range_item_cull_mask = 4
+texture = ExtResource("4_lw0xs")
+texture_scale = 8.0
+
+[node name="lamp" type="PointLight2D" parent="."]
+position = Vector2(0, 20)
+color = Color(1, 0.92834, 0.703409, 1)
+texture = ExtResource("4_lw0xs")
+texture_scale = 8.0

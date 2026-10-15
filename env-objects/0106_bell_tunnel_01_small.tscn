@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu3hm6uuhdx48"]
+
+[ext_resource type="Texture2D" uid="uid://cdq41ldib7tmf" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Hornet_Core__0106_bell_tunnel_01_small_broken.png" id="1_o8bpx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7offv"]
+size = Vector2(280, 30)
+
+[node name="0106_bell_tunnel_01_small" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_o8bpx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_7offv")

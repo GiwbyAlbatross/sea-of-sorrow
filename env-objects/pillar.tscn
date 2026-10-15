@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bt87ras7ka5c4"]
+
+[ext_resource type="Texture2D" uid="uid://bpcqqyxr6v4rk" path="res://assets/Images/Environment/SeaOfSorrow/Coral_Stone_0003_pillar_broken_side.png" id="1_thrr0"]
+
+[node name="pillar" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_thrr0")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0.5, -22)
+polygon = PackedVector2Array(-94.5, -290, -93.5, 288, 56.5, 349, 92.5, 298, 92.5, -263, 66.5, -304)

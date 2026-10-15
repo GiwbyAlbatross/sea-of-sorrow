@@ -1,0 +1,55 @@
+[gd_scene load_steps=12 format=3 uid="uid://bdcnr6hjo6ebk"]
+
+[ext_resource type="Texture2D" uid="uid://bwtp0ne0cpjun" path="res://assets/Animations/WaterFalls/0.png" id="1_p1k7o"]
+[ext_resource type="Texture2D" uid="uid://dlkflr5l2m2dc" path="res://assets/Animations/WaterFalls/1.png" id="2_loev6"]
+[ext_resource type="Texture2D" uid="uid://dfphy48n406vb" path="res://assets/Animations/WaterFalls/2.png" id="3_tao86"]
+[ext_resource type="Texture2D" uid="uid://bdb1uk4elhoyf" path="res://assets/Animations/WaterFalls/3.png" id="4_mjm54"]
+[ext_resource type="Texture2D" uid="uid://dnwrc2i60wqvi" path="res://assets/Animations/WaterFalls/4.png" id="5_wgn5w"]
+[ext_resource type="Texture2D" uid="uid://b61wkt8ttnd6l" path="res://assets/Animations/WaterFalls/5.png" id="6_kipl8"]
+[ext_resource type="Texture2D" uid="uid://b7ugm7k5eiukq" path="res://assets/Animations/WaterFalls/6.png" id="7_g3v2u"]
+[ext_resource type="Texture2D" uid="uid://ba21ht4ouwy0f" path="res://assets/Animations/WaterFalls/7.png" id="8_eckjk"]
+[ext_resource type="Texture2D" uid="uid://cnpjf77jhnmml" path="res://assets/Animations/WaterFalls/8.png" id="9_xjxik"]
+[ext_resource type="Texture2D" uid="uid://1iqab5xm0cx3" path="res://assets/Animations/WaterFalls/9.png" id="10_e03u0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cu15a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p1k7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_loev6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tao86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mjm54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wgn5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kipl8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_g3v2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_eckjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_xjxik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_e03u0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="waterfall_000" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_cu15a")
+autoplay = "default"
+frame_progress = 0.986283

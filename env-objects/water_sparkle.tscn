@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://db6urt6mqv8sf"]
+
+[ext_resource type="Texture2D" uid="uid://csd4uap4o7m5l" path="res://assets/Animations/WaterSparkle/sprintmaster_water_sparkle0000.png" id="1_82i2w"]
+[ext_resource type="Texture2D" uid="uid://d0duxyranq6e1" path="res://assets/Animations/WaterSparkle/sprintmaster_water_sparkle0001.png" id="2_ryb2l"]
+[ext_resource type="Texture2D" uid="uid://b3qgrsysmm0nk" path="res://assets/Animations/WaterSparkle/sprintmaster_water_sparkle0002.png" id="3_lv3dj"]
+[ext_resource type="Texture2D" uid="uid://b7ywcxa3wyuv8" path="res://assets/Animations/WaterSparkle/sprintmaster_water_sparkle0003.png" id="4_dbrax"]
+[ext_resource type="Texture2D" uid="uid://d0v3yyh8pg1yj" path="res://assets/Animations/WaterSparkle/sprintmaster_water_sparkle0004.png" id="5_bjfor"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_odn8f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_82i2w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ryb2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lv3dj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dbrax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bjfor")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="WaterSparkle" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_odn8f")
+autoplay = "default"
+frame_progress = 0.000361407

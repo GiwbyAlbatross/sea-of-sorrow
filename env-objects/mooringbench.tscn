@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://d0mo48uue5w6f"]
+
+[ext_resource type="Script" uid="uid://bs1p81g1vvh7i" path="res://scripts/bench.gd" id="1_t5qg5"]
+[ext_resource type="Texture2D" uid="uid://sitwqa2cobox" path="res://assets/Images/mooring-bench.png" id="2_antos"]
+[ext_resource type="Texture2D" uid="uid://t3ysso1y21n2" path="res://assets/Animations/Player/mooring-bench-sit/sit/000.atlastex" id="3_3jgkk"]
+[ext_resource type="Texture2D" uid="uid://ctj446joehbsp" path="res://assets/Animations/Player/mooring-bench-sit/sit/slumped.atlastex" id="4_8cqae"]
+[ext_resource type="Texture2D" uid="uid://cour7giiian2k" path="res://assets/Animations/Player/mooring-bench-sit/sit/getup000.atlastex" id="5_cfdm7"]
+[ext_resource type="Texture2D" uid="uid://p1pcor0sm5oy" path="res://assets/Animations/Player/mooring-bench-sit/sit/getup001.atlastex" id="6_1n8oi"]
+[ext_resource type="Texture2D" uid="uid://cb6w0natt5v7k" path="res://assets/Animations/Player/mooring-bench-sit/sit/getup002.atlastex" id="7_bi4cu"]
+[ext_resource type="FontFile" uid="uid://ba5jlr30njkft" path="res://assets/TrajanPro.ttf" id="8_antos"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t2haj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3jgkk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_8cqae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cfdm7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1n8oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bi4cu")
+}],
+"loop": false,
+"name": &"getup",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_8cqae")
+}],
+"loop": true,
+"name": &"slump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3jgkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8cqae")
+}],
+"loop": true,
+"name": &"slump-alternating",
+"speed": 5.0
+}]
+
+[node name="mooringbench" type="Area2D"]
+script = ExtResource("1_t5qg5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-11, 68)
+texture = ExtResource("2_antos")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t2haj")
+animation = &"getup"
+frame = 3
+frame_progress = 1.0
+
+[node name="Label" type="Node2D" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="Label"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = -200.0
+offset_right = 48.0
+offset_bottom = -164.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("8_antos")
+theme_override_font_sizes/font_size = 36
+text = "REST"
+horizontal_alignment = 1

@@ -1,0 +1,228 @@
+[gd_scene load_steps=27 format=3 uid="uid://pjycgg1jhqnf"]
+
+[ext_resource type="Script" uid="uid://opmr36g0nmnn" path="res://scripts/fuzzy_stalker.gd" id="1_66kyh"]
+[ext_resource type="Texture2D" uid="uid://pshos0hb6x62" path="res://assets/Animations/Enemy/FuzzyStalker/dive/SM_stalk_dive0006.png" id="2_dgswh"]
+[ext_resource type="Texture2D" uid="uid://d3cfl10ha2eth" path="res://assets/Animations/Enemy/FuzzyStalker/dive/SM_stalk_dive0005.png" id="3_ggdlk"]
+[ext_resource type="Texture2D" uid="uid://d3rclkx0aq8lw" path="res://assets/Animations/Enemy/FuzzyStalker/dive/SM_stalk_dive0004.png" id="4_mj35j"]
+[ext_resource type="Texture2D" uid="uid://pmj1v6leme73" path="res://assets/Animations/Enemy/FuzzyStalker/dive/SM_stalk_dive0003.png" id="5_bw8j1"]
+[ext_resource type="Texture2D" uid="uid://da38m1t7cpwa4" path="res://assets/Animations/Enemy/FuzzyStalker/dive/SM_stalk_dive0002.png" id="6_ccrev"]
+[ext_resource type="Texture2D" uid="uid://bv7lg3k70r6xv" path="res://assets/Animations/Enemy/FuzzyStalker/dive/SM_stalk_dive0001.png" id="7_spc5l"]
+[ext_resource type="Texture2D" uid="uid://bs5ap8pbrtvle" path="res://assets/Animations/Enemy/FuzzyStalker/call/SM_stalk_call0000.png" id="8_tdn0p"]
+[ext_resource type="Texture2D" uid="uid://b6mxkwsx3hd0u" path="res://assets/Animations/Enemy/FuzzyStalker/call/SM_stalk_call0001.png" id="9_dnp8x"]
+[ext_resource type="Texture2D" uid="uid://d2m7ifdww3k0a" path="res://assets/Animations/Enemy/FuzzyStalker/call/SM_stalk_call0002.png" id="10_q0thb"]
+[ext_resource type="Texture2D" uid="uid://s201btw5x1p4" path="res://assets/Animations/Enemy/FuzzyStalker/call/SM_stalk_call0003.png" id="11_3ldfp"]
+[ext_resource type="Texture2D" uid="uid://0ichteerwn7h" path="res://assets/Animations/Enemy/FuzzyStalker/call/SM_stalk_call0004.png" id="12_raiik"]
+[ext_resource type="Texture2D" uid="uid://c2jvug7lvplfh" path="res://assets/Animations/Enemy/FuzzyStalker/call/SM_stalk_call0005.png" id="13_j5w47"]
+[ext_resource type="Texture2D" uid="uid://cm4o1c2r22dlb" path="res://assets/Animations/Enemy/FuzzyStalker/call/SM_stalk_call0006.png" id="14_vyy63"]
+[ext_resource type="Texture2D" uid="uid://c2xvk1l3jtuk0" path="res://assets/Animations/Enemy/FuzzyStalker/call/SM_stalk_call0007.png" id="15_fnpi4"]
+[ext_resource type="Texture2D" uid="uid://dfnm0igxe4aie" path="res://assets/Animations/Enemy/FuzzyStalker/dive/SM_stalk_dive0000.png" id="16_mrjna"]
+[ext_resource type="Texture2D" uid="uid://5f3t6fj1qoc0" path="res://assets/Animations/Enemy/FuzzyStalker/hop/SM_stalk_hop0000.png" id="17_api15"]
+[ext_resource type="Texture2D" uid="uid://d1dphopwsg4m" path="res://assets/Animations/Enemy/FuzzyStalker/hop/SM_stalk_hop0001.png" id="18_1auqk"]
+[ext_resource type="Texture2D" uid="uid://dhf76djqjs1ne" path="res://assets/Animations/Enemy/FuzzyStalker/hop/SM_stalk_hop0002.png" id="19_8nlxi"]
+[ext_resource type="Texture2D" uid="uid://guuo85c6rvh8" path="res://assets/Animations/Enemy/FuzzyStalker/hop/SM_stalk_hop0003.png" id="20_w2j6y"]
+[ext_resource type="Texture2D" uid="uid://boemn02obmy78" path="res://assets/Animations/Enemy/FuzzyStalker/leap/SM_stalk_leap0000.png" id="21_2kro4"]
+[ext_resource type="Texture2D" uid="uid://ctwgf67of7wc5" path="res://assets/Animations/Enemy/FuzzyStalker/leap/SM_stalk_leap0001.png" id="22_plki1"]
+[ext_resource type="Texture2D" uid="uid://dr80l0miew5um" path="res://assets/Animations/Enemy/FuzzyStalker/leap/SM_stalk_leap0002.png" id="23_rllh2"]
+[ext_resource type="Texture2D" uid="uid://dqn342t0jmy14" path="res://assets/Animations/Enemy/FuzzyStalker/leap/SM_stalk_leap0003.png" id="24_0fhbk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7xv5n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dgswh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ggdlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mj35j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bw8j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ccrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_spc5l")
+}],
+"loop": false,
+"name": &"appear",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_tdn0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_dnp8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_q0thb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3ldfp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_raiik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_j5w47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vyy63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fnpi4")
+}],
+"loop": false,
+"name": &"call",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_mrjna")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_mrjna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_spc5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ccrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bw8j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mj35j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ggdlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dgswh")
+}],
+"loop": false,
+"name": &"dive",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_api15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1auqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8nlxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_w2j6y")
+}],
+"loop": false,
+"name": &"hop",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_api15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_1auqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8nlxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_w2j6y")
+}],
+"loop": true,
+"name": &"hoprun",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_spc5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ccrev")
+}],
+"loop": false,
+"name": &"jump_begin",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ccrev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bw8j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mj35j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ggdlk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_mrjna")
+}],
+"loop": false,
+"name": &"jump_end",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ccrev")
+}],
+"loop": true,
+"name": &"jump_loop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_2kro4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_plki1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rllh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_0fhbk")
+}],
+"loop": true,
+"name": &"leap (broken)",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_17juy"]
+size = Vector2(134, 140)
+
+[node name="FuzzyStalker" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_66kyh")
+
+[node name="dontshowthisinproduction" type="ColorRect" parent="."]
+visible = false
+offset_left = -124.0
+offset_top = -156.0
+offset_right = 159.0
+offset_bottom = 131.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7xv5n")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_17juy")

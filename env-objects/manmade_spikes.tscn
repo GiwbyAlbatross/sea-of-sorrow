@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://drhlafqfpsu7i"]
+
+[ext_resource type="Script" uid="uid://d2g4ktnsniua8" path="res://scripts/damaging_area_2d.gd" id="1_dyt0d"]
+[ext_resource type="Texture2D" uid="uid://dqgpd8gxigno6" path="res://assets/Images/Environment/SeaOfSorrow-civilised/ornate_spikes_short0002.png" id="2_2sy3c"]
+
+[node name="ManmadeSpikes (DamagingArea2D)" type="Area2D"]
+collision_layer = 3
+collision_mask = 2
+script = ExtResource("1_dyt0d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2sy3c")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-39, -120, 38, -53, 39, 88, -39, 5)

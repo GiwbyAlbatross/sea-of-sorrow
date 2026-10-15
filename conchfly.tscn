@@ -1,0 +1,112 @@
+[gd_scene load_steps=16 format=3 uid="uid://cwhmpbudnrnp4"]
+
+[ext_resource type="Script" uid="uid://bg8e5rtlsgilb" path="res://scripts/conchfly.gd" id="1_6hq2o"]
+[ext_resource type="Texture2D" uid="uid://dyit7nhbm0gfe" path="res://assets/Animations/Enemy/conchfly/pummel/3.res" id="1_ong58"]
+[ext_resource type="Texture2D" uid="uid://2s7eda1kw8ow" path="res://assets/Animations/Enemy/conchfly/dead-spritesheet.tres" id="2_6hq2o"]
+[ext_resource type="Texture2D" uid="uid://rg2ngcshrwok" path="res://assets/Animations/Enemy/conchfly/idle/0.res" id="3_rlwqv"]
+[ext_resource type="Texture2D" uid="uid://boq66l57uyrdf" path="res://assets/Animations/Enemy/conchfly/idle/1.res" id="4_rjcf7"]
+[ext_resource type="Texture2D" uid="uid://o2p6lpk2ir3j" path="res://assets/Animations/Enemy/conchfly/idle/2.res" id="5_xwvdw"]
+[ext_resource type="Texture2D" uid="uid://csorv3xr2mpy2" path="res://assets/Animations/Enemy/conchfly/pummel/0.res" id="6_5r8ra"]
+[ext_resource type="Texture2D" uid="uid://c7um75rqnonju" path="res://assets/Animations/Enemy/conchfly/pummel/1.res" id="7_s83qn"]
+[ext_resource type="Texture2D" uid="uid://crj35uwu0t1h0" path="res://assets/Particles/coral_chip_particle.png" id="9_rlwqv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_py41u"]
+atlas = ExtResource("2_6hq2o")
+region = Rect2(0, 0, 81, 107)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fy2yx"]
+atlas = ExtResource("2_6hq2o")
+region = Rect2(0, 110, 81, 107)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a43on"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_py41u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fy2yx")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rlwqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rjcf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xwvdw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5r8ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_ong58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s83qn")
+}],
+"loop": true,
+"name": &"pummel",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_madrk"]
+size = Vector2(60, 60)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rjcf7"]
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 8
+particles_anim_loop = false
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_xwvdw"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 99.156
+initial_velocity_max = 858.67
+gravity = Vector3(0, 980, 0)
+scale_min = 0.4
+scale_max = 0.5
+anim_offset_max = 1.0
+
+[node name="conchfly" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_6hq2o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(663, 296)
+texture = ExtResource("1_ong58")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_a43on")
+autoplay = "default"
+frame_progress = 0.718487
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.5, 36)
+shape = SubResource("RectangleShape2D_madrk")
+debug_color = Color(1, 0, 0, 0.419608)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_rjcf7")
+position = Vector2(0, 28)
+emitting = false
+amount = 128
+texture = ExtResource("9_rlwqv")
+one_shot = true
+explosiveness = 0.57
+visibility_rect = Rect2(-500, -4000, 1000, 8000)
+process_material = SubResource("ParticleProcessMaterial_xwvdw")

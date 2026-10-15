@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk7cgql1dyr57"]
+
+[ext_resource type="Texture2D" uid="uid://dbtf3vcdoruem" path="res://assets/Images/Environment/SeaOfSorrow-civilised/song_city_audio_pipes_0007_1_inner.png" id="1_nl2kw"]
+
+[node name="LeftArch001" type="StaticBody2D"]
+
+[node name="SongCityAudioPipes00071Inner" type="Sprite2D" parent="."]
+texture = ExtResource("1_nl2kw")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-97, 223, -85, 43, -68, -35, -48, -61, -17, -86, 15, -92, 31, -125, 78, -156, 140, -163, 147, -204, 41, -205, -96, -96, -112, 53, -120, 166, -122, 218)

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://xx2tsdkmp7ch"]
+
+[ext_resource type="Texture2D" uid="uid://dlg2st7xsxf7p" path="res://assets/Images/Environment/MossHole/moss_0.png" id="1_8ip71"]
+
+[node name="mossblob" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8ip71")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-79, -38, -78, 41, -2, 79, 77, 44, 79, -25, 43, -58, -48, -58)

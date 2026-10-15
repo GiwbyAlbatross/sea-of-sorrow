@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci11ou8edato8"]
+
+[ext_resource type="Texture2D" uid="uid://jj5maxl24tk6" path="res://assets/Images/Environment/SeaOfSorrow/Coral_0028_Layer-92.png" id="1_1b8u3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axvmh"]
+size = Vector2(52, 349)
+
+[node name="RandomVerticalCoral" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1b8u3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7, -11.5)
+shape = SubResource("RectangleShape2D_axvmh")

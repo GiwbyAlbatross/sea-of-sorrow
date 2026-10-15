@@ -1,0 +1,348 @@
+[gd_scene load_steps=40 format=3 uid="uid://c3h74pfro1jc8"]
+
+[ext_resource type="Texture2D" uid="uid://c3ji77iptpjem" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Understore_wall_floor_pipes_0008_Layer-10.png" id="1_17jdd"]
+[ext_resource type="PackedScene" uid="uid://bu3hm6uuhdx48" path="res://env-objects/0106_bell_tunnel_01_small.tscn" id="1_g84mk"]
+[ext_resource type="PackedScene" uid="uid://bipmbkbcp4tif" path="res://hornet.tscn" id="1_k66qq"]
+[ext_resource type="Script" uid="uid://bxqmb5v6mdh6" path="res://scripts/better_parallax.gd" id="2_gt6xb"]
+[ext_resource type="Texture2D" uid="uid://caqnwt4k0oa2b" path="res://assets/Images/Environment/SeaOfSorrow-civilised/brass__0004_bend_pipe_shower.png" id="3_2ln1a"]
+[ext_resource type="PackedScene" uid="uid://chywu1psj7shh" path="res://scene_changer.tscn" id="3_oa0ih"]
+[ext_resource type="Texture2D" uid="uid://b8tmypvueeqol" path="res://assets/Images/Environment/SeaOfSorrow-civilised/hanging_garden__0015_grate_wall_short_glass_cracked.png" id="3_q6df5"]
+[ext_resource type="Texture2D" uid="uid://dsgjdkl72i0r0" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Understore_wall_floor_pipes_0002_Layer-17_short.png" id="4_pccep"]
+[ext_resource type="Texture2D" uid="uid://drxgptnd2dt36" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Understore_wall_floor_pipes_0000_Layer-15.png" id="6_8jr7h"]
+[ext_resource type="Texture2D" uid="uid://dhxt1e5k3rmrs" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Understore_wall_floor_pipes_0001_Layer-16.png" id="7_xwh3l"]
+[ext_resource type="Texture2D" uid="uid://bficbm2gayy55" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Understore_wall_floor_pipes_0001_Layer-16_tile.png" id="8_xnlv7"]
+[ext_resource type="Texture2D" uid="uid://budlbqmcyjsdd" path="res://assets/Images/Environment/SeaOfSorrow-civilised/junk_piles_understore_0030_1.png" id="9_a5m5m"]
+[ext_resource type="Texture2D" uid="uid://d1u72kk6ehqbg" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Understore_pipes_silver_0002_1.png" id="10_a5m5m"]
+[ext_resource type="Texture2D" uid="uid://biuk63vwhynfu" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Understore_bg_big_pipes_far_0002_1.png" id="10_k0b68"]
+[ext_resource type="Texture2D" uid="uid://d4fp8hw46y3o" path="res://assets/Images/Environment/SeaOfSorrow-civilised/hanging_garden__0006_plat_large_edge_shorter.png" id="11_k0b68"]
+[ext_resource type="Texture2D" uid="uid://bx7cujq1ijo37" path="res://assets/Images/Environment/SeaOfSorrow-civilised/hanging_garden__0003_plat_floor_mid_float_bottom.png" id="12_17wjl"]
+[ext_resource type="Texture2D" uid="uid://df6cbax5pfctg" path="res://assets/Animations/NPCs/flea/flea_travel_left_20000.png" id="13_bpic5"]
+[ext_resource type="Script" uid="uid://2np0j2apn5xc" path="res://scripts/dialogue.gd" id="13_cjcaf"]
+[ext_resource type="Texture2D" uid="uid://bmh1sfgwd6mn2" path="res://assets/Images/Environment/SeaOfSorrow-civilised/hanging_garden_inner_wall_0002_1.png" id="13_rwcru"]
+[ext_resource type="Texture2D" uid="uid://d4e13nulfe3tl" path="res://assets/Animations/NPCs/flea/flea_travel_left_20001.png" id="14_nhv7j"]
+[ext_resource type="Texture2D" uid="uid://bq4e3bjg3k51" path="res://assets/Animations/NPCs/flea/flea_travel_left_20002.png" id="15_8dskv"]
+[ext_resource type="Texture2D" uid="uid://c04us6x75321e" path="res://assets/Images/Environment/SeaOfSorrow-civilised/brass__0025_pipe_ring_02.png" id="16_k0b68"]
+[ext_resource type="Texture2D" uid="uid://dgwbsn5807uij" path="res://assets/Animations/NPCs/flea/flea_travel_left_20003.png" id="16_qvtrk"]
+[ext_resource type="Texture2D" uid="uid://iageg3vnnkup" path="res://assets/Animations/NPCs/flea/flea_travel_left_20004.png" id="17_81eey"]
+[ext_resource type="Texture2D" uid="uid://bdoqgpww3yjki" path="res://assets/Animations/NPCs/flea/flea_travel_left_20005.png" id="18_bgr4d"]
+[ext_resource type="Script" uid="uid://ceg7bc17fbjj0" path="res://scripts/visible_setter_onload.gd" id="19_17wjl"]
+[ext_resource type="Texture2D" uid="uid://dchiwm6nrio8u" path="res://assets/Images/Environment/SeaOfSorrow-civilised/dock_b__0049_table.png" id="19_ujmas"]
+[ext_resource type="Texture2D" uid="uid://dl5l1jjifpxd3" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Understore_exit_pipes_0001_Layer-2.png" id="21_81eey"]
+[ext_resource type="FontFile" uid="uid://ba5jlr30njkft" path="res://assets/TrajanPro.ttf" id="21_e1d5h"]
+[ext_resource type="PackedScene" uid="uid://duotlclhiymc2" path="res://env-objects/dock_pipe_0013_lamp.tscn" id="22_ujmas"]
+[ext_resource type="Texture2D" uid="uid://bbcjxnqvc0olk" path="res://assets/Particles/particle_drip.png" id="25_qvtrk"]
+[ext_resource type="Texture2D" uid="uid://dmw8bd37tsw52" path="res://assets/Images/Environment/SeaOfSorrow-civilised/kitchen_cauldrons_0004_1.png" id="26_81eey"]
+[ext_resource type="Texture2D" uid="uid://p2dba30axau2" path="res://assets/Particles/hot_spring_smoke.png" id="27_bgr4d"]
+[ext_resource type="PackedScene" uid="uid://cfdg2jref2uki" path="res://env-objects/preserve_jar.tscn" id="29_bgr4d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cjcaf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_bpic5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nhv7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8dskv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qvtrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_81eey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_bgr4d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujmas"]
+size = Vector2(70, 42)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ujmas"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 400, 0)
+scale_min = 0.1
+scale_max = 0.1
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cjcaf"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(20.2, 1, 0)
+angle_min = -180.0
+angle_max = 180.0
+gravity = Vector3(0, -22.2, 0)
+scale_min = 0.15
+scale_max = 0.25
+turbulence_enabled = true
+turbulence_influence_min = 0.01
+turbulence_influence_max = 0.01
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g84mk"]
+size = Vector2(20, 81)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="world_bg" type="Node2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="CanvasGroup_000" type="CanvasGroup" parent="world_bg"]
+
+[node name="CanvasGroup_002" type="CanvasGroup" parent="world_bg"]
+
+[node name="UnderstoreWallFloorPipes0008Layer-11" type="Sprite2D" parent="world_bg/CanvasGroup_002"]
+position = Vector2(724, -124)
+rotation = -1.5708
+scale = Vector2(2, 2)
+texture = ExtResource("1_17jdd")
+script = ExtResource("2_gt6xb")
+scroll_scale = Vector2(0.9, 0.98)
+
+[node name="UnderstoreWallFloorPipes0008Layer-10" type="Sprite2D" parent="world_bg/CanvasGroup_002/UnderstoreWallFloorPipes0008Layer-11"]
+position = Vector2(1.14441e-05, -281)
+texture = ExtResource("1_17jdd")
+
+[node name="UnderstoreWallFloorPipes0008Layer-12" type="Sprite2D" parent="world_bg/CanvasGroup_002/UnderstoreWallFloorPipes0008Layer-11"]
+position = Vector2(-1.14441e-05, 267)
+texture = ExtResource("1_17jdd")
+
+[node name="CanvasGroup_001" type="CanvasGroup" parent="world_bg"]
+
+[node name="0106_bell_tunnel_01_small" parent="world_bg/CanvasGroup_001" instance=ExtResource("1_g84mk")]
+position = Vector2(54, 50)
+
+[node name="0106_bell_tunnel_01_small2" parent="world_bg/CanvasGroup_001/0106_bell_tunnel_01_small" instance=ExtResource("1_g84mk")]
+show_behind_parent = true
+position = Vector2(282, 0)
+
+[node name="0106_bell_tunnel_01_small4" parent="world_bg/CanvasGroup_001/0106_bell_tunnel_01_small" instance=ExtResource("1_g84mk")]
+show_behind_parent = true
+position = Vector2(830, 0)
+
+[node name="0106_bell_tunnel_01_small3" parent="world_bg/CanvasGroup_001/0106_bell_tunnel_01_small" instance=ExtResource("1_g84mk")]
+show_behind_parent = true
+position = Vector2(554, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world_bg/CanvasGroup_001"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world_bg/CanvasGroup_001/StaticBody2D"]
+polygon = PackedVector2Array(-66, -172, -68, -202, -80, -228, -140, -248, -152, -272, -120, -358, -112, -372, -94, -382, -76, -356, -66, -352, 464, -352, 490, -372, 502, -344, 522, -324, 570, -324, 688, -324, 706, -308, 742, -314, 738, -328, 528, -340, 494, -384, -106, -394, -170, -276, -88, -190)
+
+[node name="Brass0004BendPipeShower" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D"]
+position = Vector2(-90, -202)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_2ln1a")
+
+[node name="UnderstoreWallFloorPipes0002Layer-17Short" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D"]
+position = Vector2(-128, -314)
+rotation = 0.302059
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_pccep")
+
+[node name="UnderstoreWallFloorPipes0000Layer-15" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D"]
+position = Vector2(620, -352)
+texture = ExtResource("6_8jr7h")
+
+[node name="UnderstoreWallFloorPipes0001Layer-16" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D"]
+position = Vector2(40, -370)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("7_xwh3l")
+flip_v = true
+
+[node name="UnderstoreWallFloorPipes0001Layer-16Tile" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D/UnderstoreWallFloorPipes0001Layer-16"]
+position = Vector2(264, 8.82149e-06)
+texture = ExtResource("8_xnlv7")
+flip_v = true
+
+[node name="UnderstoreWallFloorPipes0001Layer-16Tile2" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D/UnderstoreWallFloorPipes0001Layer-16"]
+position = Vector2(426.667, 2.66668)
+texture = ExtResource("8_xnlv7")
+flip_v = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="world_bg/CanvasGroup_001"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world_bg/CanvasGroup_001/StaticBody2D2"]
+polygon = PackedVector2Array(682, -362, 702, -324, 912, -324, 932, -320, 986, -310, 1032, -330, 1106, -332, 1156, -312, 1202, -288, 1226, -248, 1268, -238, 1270, 30, 1338, -40, 1338, -362)
+
+[node name="UnderstorePipesSilver00021" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D2"]
+position = Vector2(1006, -334)
+rotation = -1.38405
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_a5m5m")
+
+[node name="HangingGarden0006PlatLargeEdgeShorter" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D2"]
+position = Vector2(1184, -302)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_k0b68")
+flip_h = true
+
+[node name="HangingGarden0003PlatFloorMidFloatBottom" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D2"]
+position = Vector2(810, -344)
+texture = ExtResource("12_17wjl")
+
+[node name="HangingGardenInnerWall00021" type="Sprite2D" parent="world_bg/CanvasGroup_001/StaticBody2D2"]
+position = Vector2(1302, -114)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_rwcru")
+
+[node name="ColorRect" type="ColorRect" parent="world_bg/CanvasGroup_001/StaticBody2D2/HangingGardenInnerWall00021"]
+show_behind_parent = true
+offset_left = -57.0
+offset_top = -313.0
+offset_right = 537.0
+offset_bottom = 257.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="entities" type="Node2D" parent="."]
+
+[node name="fleadude" type="Area2D" parent="entities"]
+position = Vector2(504, -36)
+collision_layer = 6
+collision_mask = 2
+script = ExtResource("13_cjcaf")
+text_simple = Array[String](["Hello! I am Mishno!", "I once was the greatest maker of flea brew the flea caravan had ever seen, but the caravan departed for the Marrow without me.", "I stumbled upon this lab, presumaby built by the great scientists of the Citadel and established a very efficient, almost industrialised setup for making flea brew!", "Would you like some? My contraption makes more than I alone can consume, so you're always welcome to come and have some."])
+
+[node name="AnimatableBody2D" type="AnimatedSprite2D" parent="entities/fleadude"]
+position = Vector2(-7, 11)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_cjcaf")
+autoplay = "default"
+frame = 2
+frame_progress = 0.244917
+flip_h = true
+
+[node name="DockB0049Table" type="Sprite2D" parent="entities/fleadude"]
+position = Vector2(0, 37)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("19_ujmas")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entities/fleadude"]
+position = Vector2(-7, 11)
+shape = SubResource("RectangleShape2D_ujmas")
+
+[node name="Label" type="Label" parent="entities/fleadude"]
+offset_left = -34.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = -5.0
+theme_override_fonts/font = ExtResource("21_e1d5h")
+theme_override_font_sizes/font_size = 11
+text = "SPEAK"
+horizontal_alignment = 1
+
+[node name="hornet" parent="." instance=ExtResource("1_k66qq")]
+position = Vector2(-3, -26)
+
+[node name="world_fg" type="Node2D" parent="."]
+scale = Vector2(0.5, 0.5)
+
+[node name="CanvasGroup_000" type="CanvasGroup" parent="world_fg"]
+
+[node name="CanvasGroup_002" type="Node2D" parent="world_fg"]
+position = Vector2(1068, -100)
+script = ExtResource("2_gt6xb")
+scroll_scale = Vector2(1.01, 1)
+
+[node name="UnderstoreExitPipes0001Layer-2" type="Sprite2D" parent="world_fg/CanvasGroup_002"]
+position = Vector2(-38, -250)
+rotation = -1.23046
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("21_81eey")
+script = ExtResource("2_gt6xb")
+scroll_scale = Vector2(1.02, 1.01)
+
+[node name="DockPipe0013Lamp" parent="world_fg/CanvasGroup_002/UnderstoreExitPipes0001Layer-2" instance=ExtResource("22_ujmas")]
+show_behind_parent = true
+position = Vector2(-143.281, 50.7386)
+rotation = 1.23046
+script = null
+
+[node name="UnderstoreWallFloorPipes0000Layer-15" type="Sprite2D" parent="world_fg/CanvasGroup_002"]
+position = Vector2(18, -186)
+rotation = -1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_8jr7h")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="world_fg/CanvasGroup_002/UnderstoreWallFloorPipes0000Layer-15"]
+self_modulate = Color(1, 0.905056, 0.591703, 1)
+position = Vector2(-122.76, -27.43)
+amount = 192
+amount_ratio = 0.01
+texture = ExtResource("25_qvtrk")
+lifetime = 0.73
+randomness = 0.01
+visibility_rect = Rect2(-500, -100, 500, 200)
+process_material = SubResource("ParticleProcessMaterial_ujmas")
+
+[node name="KitchenCauldrons00041" type="Sprite2D" parent="world_fg/CanvasGroup_002"]
+self_modulate = Color(1.6, 1.6, 1.6, 1)
+position = Vector2(-2, 92)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("26_81eey")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="world_fg/CanvasGroup_002/KitchenCauldrons00041"]
+self_modulate = Color(1, 1, 1, 0.072)
+show_behind_parent = true
+light_mask = 5
+position = Vector2(-12, -28)
+amount = 32
+texture = ExtResource("27_bgr4d")
+lifetime = 5.15
+randomness = 0.34
+visibility_rect = Rect2(-100, -350, 200, 400)
+process_material = SubResource("ParticleProcessMaterial_cjcaf")
+
+[node name="CanvasGroup_001" type="CanvasGroup" parent="world_fg"]
+
+[node name="JunkPilesUnderstore00301" type="Sprite2D" parent="world_fg/CanvasGroup_001"]
+position = Vector2(510, -386)
+texture = ExtResource("9_a5m5m")
+script = ExtResource("2_gt6xb")
+scroll_scale = Vector2(1.01, 1.01)
+
+[node name="UnderstoreBgBigPipesFar00021" type="Sprite2D" parent="world_fg/CanvasGroup_001"]
+position = Vector2(724, -134)
+texture = ExtResource("10_k0b68")
+script = ExtResource("2_gt6xb")
+scroll_scale = Vector2(1.025, 1)
+
+[node name="Brass0025PipeRing02" type="Sprite2D" parent="world_fg/CanvasGroup_001/UnderstoreBgBigPipesFar00021"]
+position = Vector2(2, 158)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_k0b68")
+flip_v = true
+
+[node name="HangingGarden0015GrateWallShortGlassCracked" type="Sprite2D" parent="world_fg/CanvasGroup_001"]
+position = Vector2(-90, -86)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_q6df5")
+flip_h = true
+
+[node name="0106_bell_tunnel_01_small5" parent="world_fg/CanvasGroup_001" instance=ExtResource("1_g84mk")]
+show_behind_parent = true
+position = Vector2(1132, 50)
+
+[node name="PreserveJar" parent="world_fg/CanvasGroup_001" instance=ExtResource("29_bgr4d")]
+position = Vector2(494, 22)
+
+[node name="SceneChangerLeft" parent="." instance=ExtResource("3_oa0ih")]
+target_scene = "res://sos-civilised.tscn"
+target_position = Vector2(444, 329)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneChangerLeft"]
+position = Vector2(-47, -36.5)
+shape = SubResource("RectangleShape2D_g84mk")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.804743, 0.804743, 0.804743, 1)
+script = ExtResource("19_17wjl")
+ingame_visible = true

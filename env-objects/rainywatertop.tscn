@@ -1,0 +1,51 @@
+[gd_scene load_steps=11 format=3 uid="uid://dc318a5utbwdo"]
+
+[ext_resource type="Texture2D" uid="uid://cobjc83a30x0r" path="res://assets/Animations/WaterTop/0.png" id="1_ax77t"]
+[ext_resource type="Texture2D" uid="uid://dfey6fufgh6ow" path="res://assets/Animations/WaterTop/1.png" id="2_bcvc6"]
+[ext_resource type="Texture2D" uid="uid://6dxd6l762nky" path="res://assets/Animations/WaterTop/2.png" id="3_7gurq"]
+[ext_resource type="Texture2D" uid="uid://batlaaskg3v1w" path="res://assets/Animations/WaterTop/3.png" id="4_oshol"]
+[ext_resource type="Texture2D" uid="uid://dtwbfp37efl3l" path="res://assets/Animations/WaterTop/4.png" id="5_uhciu"]
+[ext_resource type="Texture2D" uid="uid://dwqkxkfa1hi34" path="res://assets/Animations/WaterTop/5.png" id="6_k4air"]
+[ext_resource type="Texture2D" uid="uid://b243cmc01i0bv" path="res://assets/Animations/WaterTop/6.png" id="7_vf3ar"]
+[ext_resource type="Texture2D" uid="uid://df7mxtidqqmxi" path="res://assets/Animations/WaterTop/7.png" id="8_yfd5s"]
+[ext_resource type="Texture2D" uid="uid://ds82rjvs3pkml" path="res://assets/Animations/WaterTop/8.png" id="9_ifqxe"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x4fxd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ax77t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bcvc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7gurq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_oshol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uhciu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_k4air")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vf3ar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yfd5s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ifqxe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="rainywatertop" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_x4fxd")
+autoplay = "default"
+frame_progress = 0.762163

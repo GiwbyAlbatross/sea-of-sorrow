@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://2s7eda1kw8ow"]
+
+[ext_resource type="Texture2D" uid="uid://b6wucrwcf2xc" path="res://assets/Animations/Enemy/conchfly/Conchfly - atlas0 #93092.png" id="1_8fnsj"]
+
+[resource]
+atlas = ExtResource("1_8fnsj")
+region = Rect2(780, 1084, 80, 221)

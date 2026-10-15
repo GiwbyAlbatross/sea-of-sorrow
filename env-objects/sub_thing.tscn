@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://00jkx47ci047"]
+
+[ext_resource type="Texture2D" uid="uid://shjjdk14nir8" path="res://assets/Images/Environment/SeaOfSorrow/sub-thing-SoS.png" id="1_ah8vd"]
+[ext_resource type="Texture2D" uid="uid://c3qjcnrb21ffc" path="res://assets/Images/Environment/SeaOfSorrow/sub-thing-light.png" id="2_n556u"]
+
+[node name="subthing" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ah8vd")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("2_n556u")

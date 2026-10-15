@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs8bvh7qxusu3"]
+
+[ext_resource type="Texture2D" uid="uid://bl5dh3d1u5pw2" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Grand_Gallery_0007_1_bath_plat.png" id="1_ekhc3"]
+
+[node name="Grand_Gallery_0007_1_bath_plat" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ekhc3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-145, -59, 143, -59, 143, -15, 49, 46, -49, 46, -145, -16)

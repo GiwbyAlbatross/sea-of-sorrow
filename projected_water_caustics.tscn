@@ -1,0 +1,220 @@
+[gd_scene load_steps=54 format=3 uid="uid://d3pa1sj1mtmpg"]
+
+[ext_resource type="Shader" uid="uid://dvvsjfytalf6u" path="res://scripts/caustic_compositor.gdshader" id="1_bbphl"]
+[ext_resource type="Texture2D" uid="uid://bqwgw34ajftfj" path="res://assets/Animations/caustics/caustic_small_000.png" id="2_nvt5f"]
+[ext_resource type="Texture2D" uid="uid://cqkmcb50h0vpc" path="res://assets/Animations/caustics/caustic_small_001.png" id="3_e835y"]
+[ext_resource type="Texture2D" uid="uid://cyl8lute0x71k" path="res://assets/Animations/caustics/caustic_small_002.png" id="4_fj015"]
+[ext_resource type="Texture2D" uid="uid://c5whgjhon12jy" path="res://assets/Animations/caustics/caustic_small_003.png" id="5_4yeio"]
+[ext_resource type="Texture2D" uid="uid://d36cv4lxkip1a" path="res://assets/Animations/caustics/caustic_small_004.png" id="6_nymff"]
+[ext_resource type="Texture2D" uid="uid://dso6esdc6llcn" path="res://assets/Animations/caustics/caustic_small_005.png" id="7_yauad"]
+[ext_resource type="Texture2D" uid="uid://bl0qgqihv3aet" path="res://assets/Animations/caustics/caustic_small_006.png" id="8_wk4tf"]
+[ext_resource type="Texture2D" uid="uid://brntfywxtasyd" path="res://assets/Animations/caustics/caustic_small_007.png" id="9_huhst"]
+[ext_resource type="Texture2D" uid="uid://bhkx2crt3lyqj" path="res://assets/Animations/caustics/caustic_small_008.png" id="10_fg70d"]
+[ext_resource type="Texture2D" uid="uid://1qhsxkxpskod" path="res://assets/Animations/caustics/caustic_small_009.png" id="11_8vdyy"]
+[ext_resource type="Texture2D" uid="uid://ck0kbhy0nh325" path="res://assets/Animations/caustics/caustic_small_010.png" id="12_tiv2v"]
+[ext_resource type="Texture2D" uid="uid://b4f3syw0p3s5b" path="res://assets/Animations/caustics/caustic_small_011.png" id="13_2n6ud"]
+[ext_resource type="Texture2D" uid="uid://bc753xen0e4s0" path="res://assets/Animations/caustics/caustic_small_012.png" id="14_oadqj"]
+[ext_resource type="Texture2D" uid="uid://dq6eqp5q1rq5t" path="res://assets/Animations/caustics/caustic_small_013.png" id="15_8402q"]
+[ext_resource type="Texture2D" uid="uid://dqupwtsasdww5" path="res://assets/Animations/caustics/caustic_small_014.png" id="16_dqnwp"]
+[ext_resource type="Texture2D" uid="uid://6nag0os4wek4" path="res://assets/Animations/caustics/caustic_small_015.png" id="17_xlfjo"]
+[ext_resource type="Texture2D" uid="uid://hv60v5eri155" path="res://assets/Animations/caustics/caustic_small_016.png" id="18_akhrj"]
+[ext_resource type="Texture2D" uid="uid://1v5su81swtcr" path="res://assets/Animations/caustics/caustic_small_017.png" id="19_b60cl"]
+[ext_resource type="Texture2D" uid="uid://b3u4ebbbasok7" path="res://assets/Animations/caustics/caustic_small_018.png" id="20_jjkrt"]
+[ext_resource type="Texture2D" uid="uid://ncaqk5mswmyc" path="res://assets/Animations/caustics/caustic_small_019.png" id="21_oooc0"]
+[ext_resource type="Texture2D" uid="uid://btr7do70hyiop" path="res://assets/Animations/caustics/caustic_small_020.png" id="22_nyq2p"]
+[ext_resource type="Texture2D" uid="uid://dalcp1o1xodos" path="res://assets/Animations/caustics/caustic_small_021.png" id="23_h5xvb"]
+[ext_resource type="Texture2D" uid="uid://brnrfelemii3q" path="res://assets/Animations/caustics/caustic_small_022.png" id="24_6ojce"]
+[ext_resource type="Texture2D" uid="uid://dj1pn502ys4w4" path="res://assets/Animations/caustics/caustic_small_023.png" id="25_hhr72"]
+[ext_resource type="Texture2D" uid="uid://de0scpxhe8vxv" path="res://assets/Animations/caustics/caustic_small_024.png" id="26_cduc2"]
+[ext_resource type="Texture2D" uid="uid://elcc3ssec6ox" path="res://assets/Animations/caustics/caustic_small_025.png" id="27_3cr8d"]
+[ext_resource type="Texture2D" uid="uid://cov0v6dcc0gla" path="res://assets/Animations/caustics/caustic_small_026.png" id="28_0hjdw"]
+[ext_resource type="Texture2D" uid="uid://cfulrwqe55ecp" path="res://assets/Animations/caustics/caustic_small_027.png" id="29_pkgsf"]
+[ext_resource type="Texture2D" uid="uid://gy2tobeyxwiq" path="res://assets/Animations/caustics/caustic_small_028.png" id="30_uncr8"]
+[ext_resource type="Texture2D" uid="uid://d0u2p7pkema1i" path="res://assets/Animations/caustics/caustic_small_029.png" id="31_5otq5"]
+[ext_resource type="Texture2D" uid="uid://7hv5b55gooet" path="res://assets/Animations/caustics/caustic_small_030.png" id="32_l14yr"]
+[ext_resource type="Texture2D" uid="uid://bs420qfrwqdni" path="res://assets/Animations/caustics/caustic_small_031.png" id="33_j40do"]
+[ext_resource type="Texture2D" uid="uid://b4g8vwjgqc7xm" path="res://assets/Animations/caustics/caustic_small_032.png" id="34_uspva"]
+[ext_resource type="Texture2D" uid="uid://nsi0ver8g64w" path="res://assets/Animations/caustics/caustic_small_033.png" id="35_n1nf5"]
+[ext_resource type="Texture2D" uid="uid://cg1i438aal1k4" path="res://assets/Animations/caustics/caustic_small_034.png" id="36_8ym2e"]
+[ext_resource type="Texture2D" uid="uid://djx2iv1yy1p2n" path="res://assets/Animations/caustics/caustic_small_035.png" id="37_mmaum"]
+[ext_resource type="Texture2D" uid="uid://b2x45dteprarq" path="res://assets/Animations/caustics/caustic_small_036.png" id="38_nwgq0"]
+[ext_resource type="Texture2D" uid="uid://dea4yurgykbji" path="res://assets/Animations/caustics/caustic_small_037.png" id="39_awhge"]
+[ext_resource type="Texture2D" uid="uid://bycycqt1pj7sk" path="res://assets/Animations/caustics/caustic_small_038.png" id="40_l4c4k"]
+[ext_resource type="Texture2D" uid="uid://dvtdq4gk3duua" path="res://assets/Animations/caustics/caustic_small_039.png" id="41_p04l8"]
+[ext_resource type="Texture2D" uid="uid://dhev4opqgj03v" path="res://assets/Animations/caustics/caustic_small_040.png" id="42_ogr4h"]
+[ext_resource type="Texture2D" uid="uid://bw23rsuifmvdr" path="res://assets/Animations/caustics/caustic_small_041.png" id="43_osuug"]
+[ext_resource type="Texture2D" uid="uid://snpv8nvslfox" path="res://assets/Animations/caustics/caustic_small_042.png" id="44_qf10e"]
+[ext_resource type="Texture2D" uid="uid://cheubt8wursmo" path="res://assets/Animations/caustics/caustic_small_043.png" id="45_to8fg"]
+[ext_resource type="Texture2D" uid="uid://b151sv873p47g" path="res://assets/Animations/caustics/caustic_small_044.png" id="46_xe6jl"]
+[ext_resource type="Texture2D" uid="uid://vw1tk8bbjgwa" path="res://assets/Animations/caustics/caustic_small_045.png" id="47_n57yb"]
+[ext_resource type="Texture2D" uid="uid://dfxo1a4ojabqn" path="res://assets/Animations/caustics/caustic_small_046.png" id="48_fnfpy"]
+[ext_resource type="Texture2D" uid="uid://bspesaeyl43rr" path="res://assets/Animations/caustics/caustic_small_047.png" id="49_5sqg2"]
+
+[sub_resource type="Gradient" id="Gradient_kfpsi"]
+offsets = PackedFloat32Array(0, 0.145455, 1)
+colors = PackedColorArray(6.64204e-06, 0.73549, 0.492308, 1, 0, 0.924334, 0.94, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_56pbd"]
+gradient = SubResource("Gradient_kfpsi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ol8a2"]
+shader = ExtResource("1_bbphl")
+shader_parameter/gradient = SubResource("GradientTexture1D_56pbd")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyaqi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nvt5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_e835y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fj015")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4yeio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nymff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yauad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wk4tf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_huhst")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fg70d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8vdyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_tiv2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2n6ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_oadqj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8402q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dqnwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_xlfjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_akhrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_b60cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_jjkrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_oooc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_nyq2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_h5xvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_6ojce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_hhr72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_cduc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_3cr8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_0hjdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_pkgsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_uncr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5otq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_l14yr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_j40do")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_uspva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_n1nf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8ym2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_mmaum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_nwgq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_awhge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_l4c4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_p04l8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_ogr4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_osuug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_qf10e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_to8fg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_xe6jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_n57yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_fnfpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_5sqg2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="ProjectedWaterCaustics2D" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_ol8a2")
+sprite_frames = SubResource("SpriteFrames_qyaqi")
+autoplay = "default"
+frame_progress = 0.378657

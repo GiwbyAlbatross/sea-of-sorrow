@@ -1,0 +1,194 @@
+[gd_scene load_steps=13 format=3 uid="uid://danshj6s4cr86"]
+
+[ext_resource type="Texture2D" uid="uid://cihfiyyqytact" path="res://assets/Images/BackGround/MossHole/0.png" id="1_ec14y"]
+[ext_resource type="Texture2D" uid="uid://bw70osxhyki55" path="res://assets/Images/Environment/MossHole/fung_new_0096_Layer-261.png" id="2_g65e0"]
+[ext_resource type="Texture2D" uid="uid://chcxdrmscn3bo" path="res://assets/Images/Environment/MossHole/mosshole_floor_0.png" id="2_q0hco"]
+[ext_resource type="Texture2D" uid="uid://baa5bgkocpdet" path="res://assets/Images/Environment/MossHole/mosshole_floor_1.png" id="3_g65e0"]
+[ext_resource type="Texture2D" uid="uid://cspl3fwxdacl" path="res://assets/Images/Environment/MossHole/mosshole_floor_2.png" id="4_yjv7m"]
+[ext_resource type="Texture2D" uid="uid://cyrhbwg7rwy00" path="res://assets/Images/Environment/MossHole/mosshole_bone_b_.png" id="6_g65e0"]
+[ext_resource type="PackedScene" uid="uid://bipmbkbcp4tif" path="res://hornet.tscn" id="7_efxa6"]
+[ext_resource type="AudioStream" uid="uid://85wjrf8gsn5w" path="res://assets/Sounds/Hornet - S45 HORNET-110.wav" id="279_4v3l6"]
+[ext_resource type="PackedScene" uid="uid://dqmp0bqbag6xa" path="res://lilbug.tscn" id="280_4v3l6"]
+[ext_resource type="PackedScene" uid="uid://xx2tsdkmp7ch" path="res://env-objects/mossblob.tscn" id="280_22udi"]
+[ext_resource type="AudioStream" uid="uid://c5cvlnm8srnxe" path="res://assets/Sounds/green_path_atmos_loop.wav" id="280_xj0gb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8f2s"]
+size = Vector2(923, 20)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 0.99)
+
+[node name="0" type="Sprite2D" parent="Parallax2D"]
+show_behind_parent = true
+texture = ExtResource("1_ec14y")
+
+[node name="FungNew0096Layer-261" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(-476.25, -33)
+scale = Vector2(1.73404, 1.41732)
+texture = ExtResource("2_g65e0")
+
+[node name="FungNew0096Layer-262" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(437.75, -33)
+scale = Vector2(1.73404, 1.41732)
+texture = ExtResource("2_g65e0")
+flip_h = true
+
+[node name="floor" type="Node2D" parent="."]
+position = Vector2(-483, 147)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="floor"]
+position = Vector2(368, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_v8f2s")
+
+[node name="MossholeBoneB" type="Sprite2D" parent="floor/StaticBody2D"]
+position = Vector2(-454.1, -19.5)
+rotation = -3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_g65e0")
+
+[node name="MossholeBoneB2" type="Sprite2D" parent="floor/StaticBody2D"]
+position = Vector2(454.9, -19.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_g65e0")
+flip_v = true
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="floor"]
+position = Vector2(1290, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D2"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_v8f2s")
+
+[node name="MossholeBoneB" type="Sprite2D" parent="floor/StaticBody2D2"]
+position = Vector2(-454.1, -19.5)
+rotation = -3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_g65e0")
+
+[node name="MossholeBoneB2" type="Sprite2D" parent="floor/StaticBody2D2"]
+position = Vector2(454.9, -19.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_g65e0")
+flip_v = true
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="floor"]
+position = Vector2(-564, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D3"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_v8f2s")
+
+[node name="MossholeBoneB" type="Sprite2D" parent="floor/StaticBody2D3"]
+position = Vector2(-454.1, -19.5)
+rotation = -3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_g65e0")
+
+[node name="MossholeBoneB2" type="Sprite2D" parent="floor/StaticBody2D3"]
+position = Vector2(454.9, -19.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_g65e0")
+flip_v = true
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="floor"]
+position = Vector2(-1493, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor/StaticBody2D4"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_v8f2s")
+
+[node name="MossholeBoneB" type="Sprite2D" parent="floor/StaticBody2D4"]
+position = Vector2(-454.1, -19.5)
+rotation = -3.14159
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_g65e0")
+
+[node name="MossholeBoneB2" type="Sprite2D" parent="floor/StaticBody2D4"]
+position = Vector2(454.9, -19.5)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_g65e0")
+flip_v = true
+
+[node name="Parallax2D" type="Parallax2D" parent="floor"]
+scroll_scale = Vector2(1.1, 1)
+repeat_size = Vector2(275, 0)
+repeat_times = 12
+
+[node name="ColorRect" type="ColorRect" parent="floor/Parallax2D"]
+offset_left = -95.0
+offset_right = 180.0
+offset_bottom = 1229.0
+color = Color(0, 0, 0, 1)
+
+[node name="MossholeFloor0" type="Sprite2D" parent="floor/Parallax2D"]
+position = Vector2(-61, 1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_q0hco")
+
+[node name="MossholeFloor1" type="Sprite2D" parent="floor/Parallax2D"]
+position = Vector2(3, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_g65e0")
+
+[node name="MossholeFloor2" type="Sprite2D" parent="floor/Parallax2D"]
+position = Vector2(74, 2)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_yjv7m")
+
+[node name="MossholeFloor3" type="Sprite2D" parent="floor/Parallax2D"]
+position = Vector2(146.25, 1.5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_q0hco")
+
+[node name="hornet" parent="." instance=ExtResource("7_efxa6")]
+position = Vector2(-114, -63)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.741385, 0.741385, 0.741385, 1)
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("279_4v3l6")
+bus = &"music"
+
+[node name="amb" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("280_xj0gb")
+autoplay = true
+bus = &"ambience"
+
+[node name="entities" type="Node2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[node name="lilbug" parent="entities" instance=ExtResource("280_4v3l6")]
+position = Vector2(-1403.33, 416.667)
+
+[node name="lilbug2" parent="entities" instance=ExtResource("280_4v3l6")]
+position = Vector2(-1133.33, 420)
+
+[node name="lilbug3" parent="entities" instance=ExtResource("280_4v3l6")]
+position = Vector2(-810, 416.667)
+
+[node name="world" type="Node2D" parent="."]
+scale = Vector2(0.3, 0.3)
+
+[node name="mossblob" parent="world" instance=ExtResource("280_22udi")]
+position = Vector2(-23.3333, 220)
+
+[node name="mossblob2" parent="world" instance=ExtResource("280_22udi")]
+position = Vector2(240, -76.6667)
+
+[node name="mossblob3" parent="world" instance=ExtResource("280_22udi")]
+position = Vector2(510, -593.333)
+
+[node name="mossblob4" parent="world" instance=ExtResource("280_22udi")]
+position = Vector2(70, -806.667)
+
+[node name="mossblob5" parent="world" instance=ExtResource("280_22udi")]
+position = Vector2(-400, -640)
+
+[node name="mossblob6" parent="world" instance=ExtResource("280_22udi")]
+position = Vector2(-646.667, -1056.67)

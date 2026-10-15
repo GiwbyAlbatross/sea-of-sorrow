@@ -1,0 +1,104 @@
+[gd_scene load_steps=12 format=3 uid="uid://blji8bkl0gmrr"]
+
+[ext_resource type="Script" uid="uid://buh0qiirinhyw" path="res://scripts/interact_scenechanger.gd" id="1_i4ihl"]
+[ext_resource type="Texture2D" uid="uid://cfl8x0h471wk" path="res://assets/Images/Environment/SeaOfSorrow-civilised/hanging_garden__0015_grate_wall_short_glass_side.png" id="2_jgsae"]
+[ext_resource type="Material" uid="uid://ci2lqkt3nwip2" path="res://unshaded.material" id="2_l64nv"]
+[ext_resource type="FontFile" uid="uid://ba5jlr30njkft" path="res://assets/TrajanPro.ttf" id="3_j70c1"]
+[ext_resource type="Texture2D" uid="uid://cb5ubvhcqtf3d" path="res://assets/Animations/fx/window_rain/window_rain0001 copy.png" id="3_tq256"]
+[ext_resource type="Texture2D" uid="uid://cvj421b4ki576" path="res://assets/Animations/fx/window_rain/window_rain0002 copy.png" id="4_em8sv"]
+[ext_resource type="Texture2D" uid="uid://miani54hydlt" path="res://assets/Animations/fx/window_rain/window_rain0003 copy.png" id="5_uhc0t"]
+[ext_resource type="Texture2D" uid="uid://df0d6xl6vcu8k" path="res://assets/Animations/fx/window_rain/window_rain0007 copy.png" id="6_xpl8y"]
+[ext_resource type="Texture2D" uid="uid://8w8hnlgpqrlr" path="res://assets/Animations/fx/window_rain/window_rain0008 copy.png" id="7_ojbtp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1kcov"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tq256")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_em8sv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uhc0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xpl8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ojbtp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6k0q"]
+size = Vector2(300, 493)
+
+[node name="IntractSceneChanger" type="Area2D"]
+collision_layer = 4
+collision_mask = 2
+monitorable = false
+script = ExtResource("1_i4ihl")
+
+[node name="rain" type="AnimatedSprite2D" parent="."]
+material = ExtResource("2_l64nv")
+position = Vector2(-11, -152)
+sprite_frames = SubResource("SpriteFrames_1kcov")
+autoplay = "default"
+
+[node name="rain_001" type="AnimatedSprite2D" parent="rain"]
+material = ExtResource("2_l64nv")
+position = Vector2(-37, 298)
+sprite_frames = SubResource("SpriteFrames_1kcov")
+autoplay = "default"
+
+[node name="rain_002" type="AnimatedSprite2D" parent="rain"]
+material = ExtResource("2_l64nv")
+position = Vector2(59, 98)
+sprite_frames = SubResource("SpriteFrames_1kcov")
+autoplay = "default"
+
+[node name="rain_003" type="AnimatedSprite2D" parent="rain"]
+material = ExtResource("2_l64nv")
+position = Vector2(-35, 98)
+sprite_frames = SubResource("SpriteFrames_1kcov")
+autoplay = "default"
+flip_h = true
+
+[node name="rain_004" type="AnimatedSprite2D" parent="rain"]
+material = ExtResource("2_l64nv")
+position = Vector2(-37, 204)
+sprite_frames = SubResource("SpriteFrames_1kcov")
+autoplay = "default"
+
+[node name="rain_005" type="AnimatedSprite2D" parent="rain"]
+material = ExtResource("2_l64nv")
+position = Vector2(44, 250)
+sprite_frames = SubResource("SpriteFrames_1kcov")
+autoplay = "default"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_jgsae")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -14.5)
+shape = SubResource("RectangleShape2D_i6k0q")
+
+[node name="Label" type="Node2D" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="Label"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.0
+offset_top = -200.0
+offset_right = 48.0
+offset_bottom = -164.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_j70c1")
+theme_override_font_sizes/font_size = 36
+text = "ENTER"
+horizontal_alignment = 1

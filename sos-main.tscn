@@ -1,0 +1,1068 @@
+[gd_scene load_steps=60 format=3 uid="uid://bur8plglm10p1"]
+
+[ext_resource type="PackedScene" uid="uid://c1nw6ffuqekfh" path="res://env-objects/seafloor.scn" id="1_3gqoe"]
+[ext_resource type="PackedScene" uid="uid://jtfgwpteojlt" path="res://music_setter.tscn" id="1_4hyyq"]
+[ext_resource type="PackedScene" uid="uid://bipmbkbcp4tif" path="res://hornet.tscn" id="1_fvgh8"]
+[ext_resource type="PackedScene" uid="uid://d3pa1sj1mtmpg" path="res://projected_water_caustics.tscn" id="1_tjy8u"]
+[ext_resource type="Shader" uid="uid://dvvsjfytalf6u" path="res://scripts/caustic_compositor.gdshader" id="3_j3eqh"]
+[ext_resource type="PackedScene" uid="uid://d2uaewj0jryeq" path="res://env-objects/generic_respawn_point_setter_2d.tscn" id="3_lirim"]
+[ext_resource type="Texture2D" uid="uid://jj5maxl24tk6" path="res://assets/Images/Environment/SeaOfSorrow/Coral_0028_Layer-92.png" id="4_00mcr"]
+[ext_resource type="PackedScene" uid="uid://bkpqvtabg3h1x" path="res://env-objects/random_coral_floor.tscn" id="4_2s6u0"]
+[ext_resource type="Texture2D" uid="uid://dmo1tpc1wwqvt" path="res://assets/Images/Weavenest_Murglin_Vine.png" id="4_7q26b"]
+[ext_resource type="PackedScene" uid="uid://c5wqleke27xu5" path="res://env-objects/spikes.tscn" id="4_41y2s"]
+[ext_resource type="PackedScene" uid="uid://cxsprkc5golna" path="res://env-objects/pink_coral_blob.tscn" id="5_qf8yd"]
+[ext_resource type="Script" uid="uid://ceg7bc17fbjj0" path="res://scripts/visible_setter_onload.gd" id="6_4n3up"]
+[ext_resource type="PackedScene" uid="uid://ddloc8bpij4e2" path="res://env-objects/thin_pillar.tscn" id="7_dnxlx"]
+[ext_resource type="PackedScene" uid="uid://c2wkp6mb5h6kk" path="res://env-objects/pink_coral_floor.tscn" id="8_0rkmu"]
+[ext_resource type="PackedScene" uid="uid://bcyfkbgu0urls" path="res://env-objects/random_coral_2d.tscn" id="8_dnxlx"]
+[ext_resource type="PackedScene" uid="uid://baryoi4ykabo1" path="res://env-objects/spiky_platform_medium.tscn" id="9_hcpwh"]
+[ext_resource type="PackedScene" uid="uid://bt87ras7ka5c4" path="res://env-objects/pillar.tscn" id="10_41y2s"]
+[ext_resource type="PackedScene" uid="uid://bp8k4vusjf2yv" path="res://env-objects/spiky_platform_very_large.tscn" id="10_gql6r"]
+[ext_resource type="PackedScene" uid="uid://b7pecs3f3srw7" path="res://env-objects/spiky_platform_small.tscn" id="12_ov71t"]
+[ext_resource type="Texture2D" uid="uid://hdkds8pb1nw7" path="res://assets/Images/corpses_pilgrim_spinner_0004_1_sand.png" id="13_gwfgv"]
+[ext_resource type="Texture2D" uid="uid://3i20mv4rtbdw" path="res://assets/Images/Environment/SeaOfSorrow-civilised/copper_grate_with_cloth00216000.png" id="15_c4qmr"]
+[ext_resource type="PackedScene" uid="uid://b6wce8i8rk4fm" path="res://env-objects/innerworks_static_trapdoor_006_2.tscn" id="16_kx5f7"]
+[ext_resource type="PackedScene" uid="uid://2ffpty4qe0h5" path="res://env-objects/water.tscn" id="16_ov71t"]
+[ext_resource type="PackedScene" uid="uid://cwhmpbudnrnp4" path="res://conchfly.tscn" id="16_pkhyt"]
+[ext_resource type="Texture2D" uid="uid://bhm3gm5yq4nbi" path="res://assets/Images/Environment/SeaOfSorrow-civilised/dock_pipe__0013_lamp.png" id="18_jtejf"]
+[ext_resource type="PackedScene" uid="uid://duotlclhiymc2" path="res://env-objects/dock_pipe_0013_lamp.tscn" id="18_smfks"]
+[ext_resource type="PackedScene" uid="uid://d4fgxrss7uj80" path="res://env-objects/copperthing.tscn" id="18_yw1gw"]
+[ext_resource type="PackedScene" uid="uid://dc318a5utbwdo" path="res://env-objects/rainywatertop.tscn" id="19_0sl8b"]
+[ext_resource type="PackedScene" uid="uid://clvkwmein1ern" path="res://silkfly.tscn" id="19_3y4v7"]
+[ext_resource type="Texture2D" uid="uid://bd0kiqnt1gwem" path="res://assets/Images/Environment/SeaOfSorrow/Coral_Stone_0003_pillar_cut.png" id="19_hcf2l"]
+[ext_resource type="Texture2D" uid="uid://befji8ehn8k" path="res://assets/Images/grimm_fader.png" id="20_3y4v7"]
+[ext_resource type="PackedScene" uid="uid://bdcnr6hjo6ebk" path="res://env-objects/waterfall.tscn" id="20_hcf2l"]
+[ext_resource type="PackedScene" uid="uid://bs8bvh7qxusu3" path="res://env-objects/grand_gallery_0007_1_bath_plat.tscn" id="23_6ftr7"]
+[ext_resource type="PackedScene" uid="uid://dpie12xredaa" path="res://env-objects/inverse_music_box_reward_pillar_0008.tscn" id="24_rawts"]
+[ext_resource type="PackedScene" uid="uid://r6mcw24owmc" path="res://env-objects/civilised-floor.tscn" id="25_dcfg1"]
+[ext_resource type="Texture2D" uid="uid://d2hy4mj0kg3bc" path="res://assets/Images/Environment/SeaOfSorrow-civilised/core_birdcage_lock_staues_0000_dias_floor.png" id="26_1xiqp"]
+[ext_resource type="Texture2D" uid="uid://bo0l60altmnho" path="res://assets/Images/Environment/SeaOfSorrow-civilised/core_lift_lock_0000_1_rod.png" id="26_076a7"]
+[ext_resource type="PackedScene" uid="uid://drhlafqfpsu7i" path="res://env-objects/manmade_spikes.tscn" id="27_06dvf"]
+[ext_resource type="Texture2D" uid="uid://b0vuqxa746rl1" path="res://assets/Images/Environment/SeaOfSorrow-civilised/innerworks_trapdoor_0006_1.png" id="27_471r4"]
+[ext_resource type="PackedScene" uid="uid://bu3hm6uuhdx48" path="res://env-objects/0106_bell_tunnel_01_small.tscn" id="27_vpi0t"]
+[ext_resource type="Texture2D" uid="uid://iabtdx1ys67s" path="res://assets/Images/Environment/SeaOfSorrow-civilised/innerworks_trapdoor_0006_2.png" id="28_471r4"]
+[ext_resource type="Texture2D" uid="uid://cm6qf23vpct3r" path="res://assets/Images/Environment/SeaOfSorrow-civilised/corpse_pin.png" id="28_rawts"]
+[ext_resource type="PackedScene" uid="uid://opf7g6wd2cew" path="res://env-objects/chaotic_manmade_spikes.tscn" id="29_1xiqp"]
+[ext_resource type="PackedScene" uid="uid://chywu1psj7shh" path="res://scene_changer.tscn" id="30_753y4"]
+[ext_resource type="Texture2D" uid="uid://qb2470pd67wi" path="res://assets/Particles/dust_light_texture.png" id="30_lstfi"]
+[ext_resource type="Script" uid="uid://bxqmb5v6mdh6" path="res://scripts/better_parallax.gd" id="31_irc3a"]
+[ext_resource type="Material" uid="uid://ci6o8cv6qxv8h" path="res://soft_edges.material" id="31_tly4q"]
+[ext_resource type="PackedScene" uid="uid://pjycgg1jhqnf" path="res://fuzzy_stalker.tscn" id="36_xxjbi"]
+[ext_resource type="Texture2D" uid="uid://clw84febfw4kk" path="res://assets/Images/Environment/SeaOfSorrow-civilised/dock_arch_small_strut_0001_1_new_angled_0002_1.png" id="44_vcjie"]
+[ext_resource type="PackedScene" uid="uid://cvd024i53tlof" path="res://bench.tscn" id="45_1g8x8"]
+[ext_resource type="Texture2D" uid="uid://bfi0rsjpvedh8" path="res://assets/Images/Environment/SeaOfSorrow-civilised/dock_arch_small_strut_ironwork0000_1_half_thin.png" id="47_2y8bi"]
+
+[sub_resource type="Gradient" id="Gradient_kfpsi"]
+offsets = PackedFloat32Array(0, 0.145455, 1)
+colors = PackedColorArray(6.64204e-06, 0.73549, 0.492308, 1, 0, 0.924334, 0.94, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_56pbd"]
+gradient = SubResource("Gradient_kfpsi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0sl8b"]
+shader = ExtResource("3_j3eqh")
+shader_parameter/gradient = SubResource("GradientTexture1D_56pbd")
+shader_parameter/alpha_factor = 0.83
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dnxlx"]
+size = Vector2(2, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcpwh"]
+size = Vector2(200, 580)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rawts"]
+size = Vector2(20, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_06dvf"]
+size = Vector2(20, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_753y4"]
+size = Vector2(100, 1000)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MusicSetter" parent="." instance=ExtResource("1_4hyyq")]
+enabled = false
+
+[node name="world-bg" type="Node2D" parent="."]
+scale = Vector2(0.25, 0.25)
+
+[node name="fx" type="Node2D" parent="world-bg"]
+unique_name_in_owner = true
+
+[node name="bgfx" type="Node2D" parent="world-bg/fx"]
+
+[node name="bgfx-parallax" type="Parallax2D" parent="world-bg/fx/bgfx"]
+scroll_scale = Vector2(0.9, 0.9)
+repeat_size = Vector2(3800, 0)
+repeat_times = 2
+
+[node name="ProjectedWaterCaustics2D" parent="world-bg/fx/bgfx/bgfx-parallax" instance=ExtResource("1_tjy8u")]
+position = Vector2(-1464, -296)
+scale = Vector2(6.66, 6.66)
+
+[node name="ProjectedWaterCaustics2D2" parent="world-bg/fx/bgfx/bgfx-parallax" instance=ExtResource("1_tjy8u")]
+position = Vector2(-788, -356)
+rotation = -0.311459
+scale = Vector2(6.66, 6.66)
+
+[node name="ProjectedWaterCaustics2D3" parent="world-bg/fx/bgfx/bgfx-parallax" instance=ExtResource("1_tjy8u")]
+position = Vector2(-136, -256)
+rotation = 0.47886
+scale = Vector2(6.66, 6.66)
+
+[node name="ProjectedWaterCaustics2D4" parent="world-bg/fx/bgfx/bgfx-parallax" instance=ExtResource("1_tjy8u")]
+position = Vector2(363.6, -297.169)
+rotation = -0.151844
+scale = Vector2(-6.66, 6.66)
+
+[node name="ProjectedWaterCaustics2D5" parent="world-bg/fx/bgfx/bgfx-parallax" instance=ExtResource("1_tjy8u")]
+position = Vector2(1016, -280)
+rotation = 0.546288
+scale = Vector2(-6.66, 6.66)
+
+[node name="ProjectedWaterCaustics2D6" parent="world-bg/fx/bgfx/bgfx-parallax" instance=ExtResource("1_tjy8u")]
+position = Vector2(1691.6, -257.169)
+rotation = -0.0802851
+scale = Vector2(-6.66, 6.66)
+
+[node name="ProjectedWaterCaustics2D" parent="world-bg/fx/bgfx" instance=ExtResource("1_tjy8u")]
+material = SubResource("ShaderMaterial_0sl8b")
+position = Vector2(4, -2572)
+scale = Vector2(4, 4)
+
+[node name="ProjectedWaterCaustics2D2" parent="world-bg/fx/bgfx" instance=ExtResource("1_tjy8u")]
+material = SubResource("ShaderMaterial_0sl8b")
+position = Vector2(356, -2572)
+scale = Vector2(4, 4)
+
+[node name="ProjectedWaterCaustics2D3" parent="world-bg/fx/bgfx" instance=ExtResource("1_tjy8u")]
+material = SubResource("ShaderMaterial_0sl8b")
+position = Vector2(732, -2572)
+scale = Vector2(4, 4)
+
+[node name="ProjectedWaterCaustics2D4" parent="world-bg/fx/bgfx" instance=ExtResource("1_tjy8u")]
+material = SubResource("ShaderMaterial_0sl8b")
+position = Vector2(1092, -2572)
+scale = Vector2(4, 4)
+
+[node name="ProjectedWaterCaustics2D5" parent="world-bg/fx/bgfx" instance=ExtResource("1_tjy8u")]
+material = SubResource("ShaderMaterial_0sl8b")
+position = Vector2(196, -3056)
+scale = Vector2(4.4, 4)
+
+[node name="ProjectedWaterCaustics2D6" parent="world-bg/fx/bgfx" instance=ExtResource("1_tjy8u")]
+material = SubResource("ShaderMaterial_0sl8b")
+position = Vector2(548, -3056)
+scale = Vector2(4.4, 4)
+
+[node name="ProjectedWaterCaustics2D7" parent="world-bg/fx/bgfx" instance=ExtResource("1_tjy8u")]
+material = SubResource("ShaderMaterial_0sl8b")
+position = Vector2(924, -3056)
+scale = Vector2(4.4, 4)
+
+[node name="ProjectedWaterCaustics2D8" parent="world-bg/fx/bgfx" instance=ExtResource("1_tjy8u")]
+material = SubResource("ShaderMaterial_0sl8b")
+position = Vector2(1284, -3056)
+scale = Vector2(4.4, 4)
+
+[node name="randomcoral000" type="Sprite2D" parent="world-bg/fx/bgfx"]
+position = Vector2(332, -2788)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_00mcr")
+
+[node name="randomcoral003" type="Sprite2D" parent="world-bg/fx/bgfx"]
+position = Vector2(1420, -2788)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_00mcr")
+
+[node name="randomcoral001" type="Sprite2D" parent="world-bg/fx/bgfx"]
+position = Vector2(684, -2776)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_00mcr")
+
+[node name="randomcoral002" type="Sprite2D" parent="world-bg/fx/bgfx"]
+position = Vector2(1032, -2808)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("4_00mcr")
+
+[node name="RespawnPointSetter2D" parent="world-bg" instance=ExtResource("3_lirim")]
+position = Vector2(-2648, -1236)
+scale = Vector2(4, 4)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world-bg/RespawnPointSetter2D"]
+position = Vector2(0, 29)
+shape = SubResource("RectangleShape2D_dnxlx")
+
+[node name="DamagingArea2D" parent="world-bg" instance=ExtResource("4_41y2s")]
+position = Vector2(-3340, -1116)
+rotation = 1.5708
+
+[node name="world" type="Node2D" parent="world-bg"]
+position = Vector2(-2648, -1112)
+scale = Vector2(0.25, 0.25)
+
+[node name="CanvasGroup_001" type="CanvasGroup" parent="world-bg/world"]
+position = Vector2(0, -256)
+
+[node name="DamagingArea2D" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("4_41y2s")]
+position = Vector2(-1120, -2336)
+rotation = -3.14159
+scale = Vector2(4, 4)
+
+[node name="PinkCoralFloor" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("8_0rkmu")]
+position = Vector2(-1952, -2080)
+rotation = 1.5708
+scale = Vector2(4, 4)
+
+[node name="DamagingArea2D2" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("4_41y2s")]
+position = Vector2(-2176, -1440)
+rotation = -1.5708
+scale = Vector2(4, 4)
+
+[node name="DamagingArea2D4" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("4_41y2s")]
+position = Vector2(-2160, -992)
+rotation = -1.5708
+scale = Vector2(4, 4)
+
+[node name="DamagingArea2D3" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("4_41y2s")]
+position = Vector2(-2160, -1888)
+rotation = -1.5708
+scale = Vector2(4, 4)
+
+[node name="RespawnPointSetter2D" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("3_lirim")]
+position = Vector2(-1504, -2912)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world-bg/world/CanvasGroup_001/RespawnPointSetter2D"]
+shape = SubResource("RectangleShape2D_hcpwh")
+
+[node name="RandomCoral2D" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("8_dnxlx")]
+position = Vector2(-1776, -2512)
+scale = Vector2(2, 2)
+
+[node name="RandomCoral2D2" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("8_dnxlx")]
+position = Vector2(-1216, -2512)
+scale = Vector2(2, 2)
+
+[node name="PinkCoralFloor3" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("8_0rkmu")]
+position = Vector2(-1936, -800)
+rotation = 1.5708
+scale = Vector2(4, 4)
+
+[node name="PinkCoralFloor2" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("8_0rkmu")]
+position = Vector2(-1936, -1360)
+rotation = 1.5708
+scale = Vector2(4, 4)
+
+[node name="pillar" parent="world-bg/world/CanvasGroup_001" instance=ExtResource("10_41y2s")]
+position = Vector2(17520, 5072)
+
+[node name="CanvasGroup_002" type="CanvasGroup" parent="world-bg/world"]
+
+[node name="RandomCoralFloor_001" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("4_2s6u0")]
+position = Vector2(-832, 704)
+scale = Vector2(4, 4)
+
+[node name="RandomCoralFloor_002" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("4_2s6u0")]
+position = Vector2(-2592, 704)
+scale = Vector2(4, 4)
+
+[node name="pillar" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("10_41y2s")]
+position = Vector2(0, 1904)
+scale = Vector2(4, 4)
+
+[node name="thin-pillar_001" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("7_dnxlx")]
+position = Vector2(-2928, -272)
+
+[node name="thin-pillar_003" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("7_dnxlx")]
+position = Vector2(-2928, -896)
+
+[node name="thin-pillar_004" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("7_dnxlx")]
+position = Vector2(-2928, -1504)
+
+[node name="thin-pillar_005" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("7_dnxlx")]
+position = Vector2(-2928, -2096)
+
+[node name="thin-pillar_006" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("7_dnxlx")]
+position = Vector2(-2928, -2672)
+
+[node name="thin-pillar_007" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("7_dnxlx")]
+position = Vector2(-2928, -3216)
+
+[node name="thin-pillar_002" parent="world-bg/world/CanvasGroup_002" instance=ExtResource("7_dnxlx")]
+position = Vector2(-2928, 336)
+
+[node name="CanvasGroup_000" type="CanvasGroup" parent="world-bg/world"]
+
+[node name="CanvasGroup_006" type="CanvasGroup" parent="world-bg/world"]
+
+[node name="CanvasGroup_004" type="CanvasGroup" parent="world-bg/world"]
+scale = Vector2(3, 3)
+
+[node name="SpikyPlatformMedium" parent="world-bg/world/CanvasGroup_004" instance=ExtResource("9_hcpwh")]
+position = Vector2(3098.67, -1856)
+
+[node name="SpikyPlatformVeryLarge" parent="world-bg/world/CanvasGroup_004" instance=ExtResource("10_gql6r")]
+position = Vector2(2730.67, -1717.33)
+
+[node name="RespawnPointSetter2D3" parent="world-bg/world/CanvasGroup_004" instance=ExtResource("3_lirim")]
+position = Vector2(2709.33, -2010.67)
+scale = Vector2(5.33333, 5.33333)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world-bg/world/CanvasGroup_004/RespawnPointSetter2D3"]
+shape = SubResource("RectangleShape2D_dnxlx")
+
+[node name="SpikyPlatformSmall" parent="world-bg/world/CanvasGroup_004" instance=ExtResource("12_ov71t")]
+position = Vector2(3040, -1626.67)
+rotation = -3.14159
+
+[node name="CanvasGroup_003" type="CanvasGroup" parent="world-bg/world"]
+scale = Vector2(4, 4)
+
+[node name="DamagingArea2D" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(208, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D2" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(264, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D3" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(324, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D4" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(384, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D5" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(444, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D6" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(508, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D7" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(572, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D8" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(632, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D9" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(696, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D10" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(760, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D11" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(820, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D12" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(872, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D13" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(936, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="DamagingArea2D14" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("4_41y2s")]
+position = Vector2(936, -728)
+scale = Vector2(0.5, 0.5)
+
+[node name="PinkCoralFloor" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("8_0rkmu")]
+position = Vector2(300, -696)
+rotation = 3.14159
+
+[node name="PinkCoralFloor2" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("8_0rkmu")]
+position = Vector2(504, -696)
+rotation = 3.14159
+
+[node name="PinkCoralFloor3" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("8_0rkmu")]
+position = Vector2(708, -696)
+rotation = 3.14159
+
+[node name="PinkCoralFloor4" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("8_0rkmu")]
+position = Vector2(904, -696)
+rotation = 3.14159
+
+[node name="PinkCoralFloor5" parent="world-bg/world/CanvasGroup_003" instance=ExtResource("8_0rkmu")]
+position = Vector2(904, -696)
+rotation = 3.14159
+
+[node name="CanvasGroup_005" type="CanvasGroup" parent="world-bg/world"]
+
+[node name="CopperGrateWithCloth00216000" type="Sprite2D" parent="world-bg/world/CanvasGroup_005"]
+position = Vector2(19842, -7900)
+scale = Vector2(6, 6)
+texture = ExtResource("15_c4qmr")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.88, 1)
+
+[node name="CoreLiftLock00001Rod" type="Sprite2D" parent="world-bg/world/CanvasGroup_005"]
+position = Vector2(18160, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("26_076a7")
+flip_v = true
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.95, 1)
+
+[node name="CoreLiftLock00001Rod2" type="Sprite2D" parent="world-bg/world/CanvasGroup_005"]
+position = Vector2(19696, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("26_076a7")
+flip_v = true
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.95, 1)
+
+[node name="CoreLiftLock00001Rod3" type="Sprite2D" parent="world-bg/world/CanvasGroup_005"]
+position = Vector2(21488, -8000)
+scale = Vector2(8, 8)
+texture = ExtResource("26_076a7")
+flip_v = true
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.95, 1)
+
+[node name="DockPipe0013Lamp" parent="world-bg/world/CanvasGroup_005" instance=ExtResource("18_smfks")]
+position = Vector2(18880, -8704)
+scale = Vector2(4, 4)
+
+[node name="DockPipe0013Lamp2" type="Sprite2D" parent="world-bg/world/CanvasGroup_005"]
+position = Vector2(20560, -8704)
+scale = Vector2(4, 4)
+texture = ExtResource("18_jtejf")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.96, 1)
+
+[node name="silkfly" parent="world-bg/world/CanvasGroup_005/DockPipe0013Lamp2" instance=ExtResource("19_3y4v7")]
+position = Vector2(0, 20)
+scale = Vector2(1.5, 1.5)
+frame_progress = 0.885632
+
+[node name="dustlamp" type="PointLight2D" parent="world-bg/world/CanvasGroup_005/DockPipe0013Lamp2"]
+position = Vector2(0, 20)
+energy = 16.0
+range_item_cull_mask = 4
+texture = ExtResource("20_3y4v7")
+texture_scale = 8.0
+
+[node name="innerworks_trapdoor_006_02_STATIC3" parent="world-bg/world/CanvasGroup_005" instance=ExtResource("16_kx5f7")]
+position = Vector2(20770, -9020)
+rotation = -3.14159
+scale = Vector2(4, 4)
+
+[node name="innerworks_trapdoor_006_02_STATIC4" parent="world-bg/world/CanvasGroup_005" instance=ExtResource("16_kx5f7")]
+position = Vector2(21696, -9020)
+rotation = -3.14159
+scale = Vector2(4, 4)
+
+[node name="innerworks_trapdoor_006_02_STATIC" parent="world-bg/world/CanvasGroup_005" instance=ExtResource("16_kx5f7")]
+position = Vector2(18914, -9020)
+rotation = -3.14159
+scale = Vector2(4, 4)
+
+[node name="innerworks_trapdoor_006_02_STATIC2" parent="world-bg/world/CanvasGroup_005" instance=ExtResource("16_kx5f7")]
+position = Vector2(19842, -9020)
+rotation = -3.14159
+scale = Vector2(4, 4)
+
+[node name="copperthing" parent="world-bg/world/CanvasGroup_005" instance=ExtResource("18_yw1gw")]
+position = Vector2(21952, -6736)
+scale = Vector2(6, 6)
+
+[node name="RespawnPointSetter2D" parent="world-bg/world/CanvasGroup_005" instance=ExtResource("3_lirim")]
+position = Vector2(22064, -8000)
+scale = Vector2(16, 16)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world-bg/world/CanvasGroup_005/RespawnPointSetter2D"]
+shape = SubResource("RectangleShape2D_rawts")
+
+[node name="RespawnPointSetter2D2" parent="world-bg/world/CanvasGroup_005" instance=ExtResource("3_lirim")]
+position = Vector2(36448, -12128)
+scale = Vector2(16, 16)
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world-bg/world/CanvasGroup_005/RespawnPointSetter2D2"]
+position = Vector2(110, -72)
+shape = SubResource("RectangleShape2D_06dvf")
+
+[node name="bench" parent="world-bg/world/CanvasGroup_005" instance=ExtResource("45_1g8x8")]
+position = Vector2(19344, -7488)
+scale = Vector2(7.2, 7.2)
+
+[node name="CanvasGroup_007" type="CanvasGroup" parent="world-bg/world"]
+
+[node name="Grand_Gallery_0007_1_bath_plat" parent="world-bg/world/CanvasGroup_007" instance=ExtResource("23_6ftr7")]
+position = Vector2(28352, -7264)
+scale = Vector2(4, 4)
+
+[node name="inverse_music_box_reward_pillar_0008" parent="world-bg/world/CanvasGroup_007" instance=ExtResource("24_rawts")]
+position = Vector2(31504, -9392)
+scale = Vector2(8, 8)
+
+[node name="civilised-floor2" parent="world-bg/world/CanvasGroup_007" instance=ExtResource("25_dcfg1")]
+position = Vector2(43216, -10208)
+scale = Vector2(4, 4)
+
+[node name="CopperGrateWithCloth00216001" type="Sprite2D" parent="world-bg/world/CanvasGroup_007/civilised-floor2"]
+show_behind_parent = true
+position = Vector2(31.5, -290)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("15_c4qmr")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.88, 1)
+
+[node name="CoreLiftLock00001Rod4" type="Sprite2D" parent="world-bg/world/CanvasGroup_007/civilised-floor2"]
+show_behind_parent = true
+position = Vector2(-389, -315)
+scale = Vector2(2, 2)
+texture = ExtResource("26_076a7")
+flip_v = true
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.95, 1)
+
+[node name="CoreLiftLock00001Rod5" type="Sprite2D" parent="world-bg/world/CanvasGroup_007/civilised-floor2"]
+show_behind_parent = true
+position = Vector2(-5, -315)
+scale = Vector2(2, 2)
+texture = ExtResource("26_076a7")
+flip_v = true
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.95, 1)
+
+[node name="CoreLiftLock00001Rod6" type="Sprite2D" parent="world-bg/world/CanvasGroup_007/civilised-floor2"]
+show_behind_parent = true
+position = Vector2(443, -315)
+scale = Vector2(2, 2)
+texture = ExtResource("26_076a7")
+flip_v = true
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.95, 1)
+
+[node name="CoreBirdcageLockStaues0000DiasFloor" type="Sprite2D" parent="world-bg/world/CanvasGroup_007/civilised-floor2"]
+position = Vector2(0, -48)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("26_1xiqp")
+
+[node name="DockPipe0013Lamp3" type="Sprite2D" parent="world-bg/world/CanvasGroup_007/civilised-floor2"]
+position = Vector2(4, -488)
+texture = ExtResource("18_jtejf")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.96, 1)
+
+[node name="silkfly" parent="world-bg/world/CanvasGroup_007/civilised-floor2/DockPipe0013Lamp3" instance=ExtResource("19_3y4v7")]
+position = Vector2(0, 20)
+scale = Vector2(1.5, 1.5)
+frame_progress = 0.885632
+
+[node name="dustlamp" type="PointLight2D" parent="world-bg/world/CanvasGroup_007/civilised-floor2/DockPipe0013Lamp3"]
+position = Vector2(0, 20)
+energy = 16.0
+range_item_cull_mask = 4
+texture = ExtResource("20_3y4v7")
+texture_scale = 8.0
+
+[node name="ManmadeSpikes (DamagingArea2D) 0" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(-500, -700)
+scale = Vector2(-1, 1)
+
+[node name="ManmadeSpikes (DamagingArea2D) 2" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(-288, -704)
+scale = Vector2(-1, 1)
+
+[node name="ManmadeSpikes (DamagingArea2D) 4" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(-68, -712)
+scale = Vector2(-1, 1)
+
+[node name="ManmadeSpikes (DamagingArea2D) 6" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(148, -720)
+scale = Vector2(-1, 1)
+
+[node name="ManmadeSpikes (DamagingArea2D) 9" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(364, -740)
+scale = Vector2(-1, 1)
+
+[node name="ManmadeSpikes (DamagingArea2D) 1" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(-392, -708)
+
+[node name="ManmadeSpikes (DamagingArea2D) 3" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(-180, -708)
+
+[node name="ManmadeSpikes (DamagingArea2D) 5" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(40, -720)
+
+[node name="ManmadeSpikes (DamagingArea2D) 8" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(40, -720)
+
+[node name="ManmadeSpikes (DamagingArea2D) 7" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(264, -736)
+
+[node name="ManmadeSpikes (DamagingArea2D) 10" parent="world-bg/world/CanvasGroup_007/civilised-floor2" instance=ExtResource("27_06dvf")]
+position = Vector2(476, -752)
+
+[node name="civilised-floor" parent="world-bg/world/CanvasGroup_007" instance=ExtResource("25_dcfg1")]
+position = Vector2(38848, -10208)
+scale = Vector2(4, 4)
+
+[node name="copperthing" parent="world-bg/world/CanvasGroup_007/civilised-floor" instance=ExtResource("18_yw1gw")]
+show_behind_parent = true
+position = Vector2(-735.999, -10.25)
+rotation = 3.14159
+scale = Vector2(1.5, -1.5)
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.94, 1)
+
+[node name="CorpsesPilgrimSpinner00041Sand" type="Sprite2D" parent="world-bg/world/CanvasGroup_007/civilised-floor"]
+position = Vector2(-56, -167.999)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_gwfgv")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.95, 1)
+
+[node name="CorpsePin" type="Sprite2D" parent="world-bg/world/CanvasGroup_007/civilised-floor"]
+position = Vector2(36, -152)
+rotation = 2.71748
+texture = ExtResource("28_rawts")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(0.96, 1)
+
+[node name="CoreBirdcageLockStaues0000DiasFloor" type="Sprite2D" parent="world-bg/world/CanvasGroup_007/civilised-floor"]
+position = Vector2(0, -48)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("26_1xiqp")
+
+[node name="SceneChanger_topleft" parent="world-bg/world/CanvasGroup_007" instance=ExtResource("30_753y4")]
+position = Vector2(45280, -11488)
+target_scene = "res://sos-civilised.tscn"
+target_position = Vector2(0, 5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world-bg/world/CanvasGroup_007/SceneChanger_topleft"]
+shape = SubResource("RectangleShape2D_753y4")
+
+[node name="CanvasGroup_008" type="CanvasGroup" parent="world-bg/world"]
+position = Vector2(24416, -3040)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(-768, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)2" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(384, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)3" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(1584, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)4" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(2784, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)5" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(3984, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)6" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(5136, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)7" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(6288, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)8" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(7424, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)9" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(8592, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)10" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(9744, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)11" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(10880, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)12" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(12048, -64)
+scale = Vector2(4, 4)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)13" parent="world-bg/world/CanvasGroup_008" instance=ExtResource("29_1xiqp")]
+position = Vector2(13184, -64)
+scale = Vector2(4, 4)
+
+[node name="CorpsesPilgrimSpinner00041Sand" type="Sprite2D" parent="world-bg"]
+position = Vector2(1604, 124)
+texture = ExtResource("13_gwfgv")
+
+[node name="DustLightTexture_001" type="Sprite2D" parent="world-bg"]
+modulate = Color(0.5, 0.5, 0.5, 1)
+light_mask = 4
+material = ExtResource("31_tly4q")
+position = Vector2(2288, -3128)
+texture = ExtResource("30_lstfi")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(1.1, 1)
+
+[node name="SpikyPlatformMedium" parent="world-bg" instance=ExtResource("9_hcpwh")]
+position = Vector2(-2212, -2128)
+
+[node name="RespawnPointSetter2D2" parent="world-bg/SpikyPlatformMedium" instance=ExtResource("3_lirim")]
+position = Vector2(12, -216)
+scale = Vector2(4, 4)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world-bg/SpikyPlatformMedium/RespawnPointSetter2D2"]
+shape = SubResource("RectangleShape2D_dnxlx")
+
+[node name="entities" type="Node2D" parent="."]
+scale = Vector2(0.2, 0.2)
+
+[node name="conchfly" parent="entities" instance=ExtResource("16_pkhyt")]
+position = Vector2(-1240, -395)
+
+[node name="conchfly2" parent="entities" instance=ExtResource("16_pkhyt")]
+position = Vector2(-2500, -355)
+
+[node name="conchfly3" parent="entities" instance=ExtResource("16_pkhyt")]
+position = Vector2(-3915, -550)
+
+[node name="conchfly4" parent="entities" instance=ExtResource("16_pkhyt")]
+position = Vector2(-3600, -1540)
+
+[node name="conchfly5" parent="entities" instance=ExtResource("16_pkhyt")]
+position = Vector2(-4045, -2530)
+
+[node name="conchfly6" parent="entities" instance=ExtResource("16_pkhyt")]
+position = Vector2(-2380, -2945)
+
+[node name="conchfly7" parent="entities" instance=ExtResource("16_pkhyt")]
+position = Vector2(-370, -3510)
+
+[node name="FuzzyStalker" parent="entities" instance=ExtResource("36_xxjbi")]
+position = Vector2(755, 110)
+
+[node name="hornet" parent="." instance=ExtResource("1_fvgh8")]
+position = Vector2(1719, -1014)
+
+[node name="world-fg" type="Node2D" parent="."]
+scale = Vector2(0.25, 0.25)
+
+[node name="seafloor" type="CanvasGroup" parent="world-fg"]
+scale = Vector2(4, 4)
+
+[node name="seafloor1" parent="world-fg/seafloor" instance=ExtResource("1_3gqoe")]
+position = Vector2(-371, 42)
+scale = Vector2(0.25, 0.25)
+
+[node name="seafloor2" parent="world-fg/seafloor" instance=ExtResource("1_3gqoe")]
+position = Vector2(-134, 42)
+scale = Vector2(0.25, 0.25)
+
+[node name="seafloor3" parent="world-fg/seafloor" instance=ExtResource("1_3gqoe")]
+position = Vector2(104, 42)
+scale = Vector2(0.25, 0.25)
+
+[node name="seafloor4" parent="world-fg/seafloor" instance=ExtResource("1_3gqoe")]
+position = Vector2(321, 42)
+scale = Vector2(0.25, 0.25)
+
+[node name="PinkCoralBlob" parent="world-fg" instance=ExtResource("5_qf8yd")]
+position = Vector2(-2056, 128)
+rotation = 0.163788
+
+[node name="PinkCoralBlob" parent="world-fg/PinkCoralBlob" instance=ExtResource("5_qf8yd")]
+position = Vector2(-1256.15, 102.191)
+rotation = -0.328122
+scale = Vector2(-1, 1)
+
+[node name="water_001" parent="world-fg" instance=ExtResource("16_ov71t")]
+
+[node name="CanvasGroup_001" type="CanvasGroup" parent="world-fg"]
+position = Vector2(-2452, 72)
+scale = Vector2(2, 2)
+
+[node name="PinkCoralFloor1" parent="world-fg/CanvasGroup_001" instance=ExtResource("8_0rkmu")]
+position = Vector2(-204, 0)
+
+[node name="PinkCoralFloor2" parent="world-fg/CanvasGroup_001" instance=ExtResource("8_0rkmu")]
+
+[node name="RandomCoralFloor_002" parent="world-fg/CanvasGroup_001" instance=ExtResource("4_2s6u0")]
+position = Vector2(-312, -504)
+scale = Vector2(0.5, 0.5)
+
+[node name="CanvasGroup_000" type="CanvasGroup" parent="world-fg"]
+
+[node name="CanvasGroup_002" type="Node2D" parent="world-fg"]
+
+[node name="seafloor2" parent="world-fg/CanvasGroup_002" instance=ExtResource("1_3gqoe")]
+position = Vector2(488, -2340)
+scale = Vector2(0.7, 0.7)
+
+[node name="waterfall_000" parent="world-fg/CanvasGroup_002" instance=ExtResource("20_hcf2l")]
+position = Vector2(-56, -2652)
+scale = Vector2(3, 3)
+
+[node name="rainywatertop2" parent="world-fg/CanvasGroup_002/waterfall_000" instance=ExtResource("19_0sl8b")]
+position = Vector2(0, 66.6666)
+scale = Vector2(0.333333, 0.333333)
+
+[node name="lilrockpool_000" type="StaticBody2D" parent="world-fg/CanvasGroup_002"]
+position = Vector2(0, -2332)
+
+[node name="water_001" parent="world-fg/CanvasGroup_002/lilrockpool_000" instance=ExtResource("16_ov71t")]
+offset_left = -237.0
+offset_top = -125.0
+offset_right = 1356.0
+offset_bottom = 9.0
+color = Color(0.2352, 0.36624, 0.84, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="world-fg/CanvasGroup_002/lilrockpool_000"]
+rotation = 1.5708
+texture = ExtResource("19_hcf2l")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world-fg/CanvasGroup_002/lilrockpool_000"]
+polygon = PackedVector2Array(-270, -119, -256, -12, -266, 116, 257, 116, 264, 84, 280, 0, 268, -20, 144, -28, -42, -26, -117, -25, -140, -122)
+
+[node name="waterstop-lower" parent="world-fg/CanvasGroup_002" instance=ExtResource("7_dnxlx")]
+position = Vector2(1344, -2384)
+scale = Vector2(0.2, 0.2)
+
+[node name="seafloor3" parent="world-fg/CanvasGroup_002" instance=ExtResource("1_3gqoe")]
+position = Vector2(1024, -2340)
+scale = Vector2(0.7, 0.7)
+
+[node name="CanvasGroup_004" type="Node2D" parent="world-fg"]
+
+[node name="PinkCoralBlob" parent="world-fg/CanvasGroup_004" instance=ExtResource("5_qf8yd")]
+position = Vector2(1312, -2792)
+rotation = 3.04036
+scale = Vector2(0.75, -0.75)
+
+[node name="floor" type="Node2D" parent="world-fg/CanvasGroup_004"]
+editor_description = "everything looks funny if thid is a CanvasGroup but it would be wayyy more efficient
+
+GPU usage is fine atm though on my M1 (8core) so should be fine right?"
+
+[node name="WeavenestMurglinVine" type="Sprite2D" parent="world-fg/CanvasGroup_004/floor"]
+position = Vector2(848, -2640)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_7q26b")
+
+[node name="RandomCoralFloor0" parent="world-fg/CanvasGroup_004/floor" instance=ExtResource("4_2s6u0")]
+position = Vector2(96, -2728)
+rotation = -3.14159
+
+[node name="RandomCoralFloor2" parent="world-fg/CanvasGroup_004/floor" instance=ExtResource("4_2s6u0")]
+position = Vector2(316, -2728)
+rotation = -3.14159
+
+[node name="RandomCoralFloor3" parent="world-fg/CanvasGroup_004/floor" instance=ExtResource("4_2s6u0")]
+position = Vector2(536, -2728)
+rotation = -3.14159
+
+[node name="RandomCoralFloor4" parent="world-fg/CanvasGroup_004/floor" instance=ExtResource("4_2s6u0")]
+position = Vector2(756, -2728)
+rotation = -3.14159
+
+[node name="RandomCoralFloor5" parent="world-fg/CanvasGroup_004/floor" instance=ExtResource("4_2s6u0")]
+position = Vector2(976, -2728)
+rotation = -3.14159
+
+[node name="RandomCoralFloor6" parent="world-fg/CanvasGroup_004/floor" instance=ExtResource("4_2s6u0")]
+position = Vector2(1196, -2728)
+rotation = -3.14159
+
+[node name="RandomCoralFloor7" parent="world-fg/CanvasGroup_004/floor" instance=ExtResource("4_2s6u0")]
+position = Vector2(1416, -2728)
+rotation = -3.14159
+
+[node name="water_002" parent="world-fg/CanvasGroup_004" instance=ExtResource("16_ov71t")]
+offset_left = -36.0
+offset_top = -2876.0
+offset_right = 1532.0
+offset_bottom = -2732.0
+color = Color(0.235294, 0.364706, 0.839216, 1)
+
+[node name="waterstop-upper" parent="world-fg/CanvasGroup_004" instance=ExtResource("7_dnxlx")]
+position = Vector2(-20, -2796)
+scale = Vector2(0.25, 0.25)
+
+[node name="civilised-floor" parent="world-fg/CanvasGroup_004" instance=ExtResource("25_dcfg1")]
+position = Vector2(2048, -2788)
+
+[node name="CanvasGroup_003" type="Node2D" parent="world-fg"]
+position = Vector2(1384, -1304)
+
+[node name="waterfall_001" parent="world-fg/CanvasGroup_003" instance=ExtResource("20_hcf2l")]
+position = Vector2(0, 1040)
+scale = Vector2(4, 4)
+frame_progress = 0.478637
+
+[node name="waterfall_002" parent="world-fg/CanvasGroup_003" instance=ExtResource("20_hcf2l")]
+position = Vector2(0, 668)
+scale = Vector2(4, 4)
+frame_progress = 0.478637
+
+[node name="waterfall_003" parent="world-fg/CanvasGroup_003" instance=ExtResource("20_hcf2l")]
+position = Vector2(0, 160)
+scale = Vector2(4, 4)
+frame_progress = 0.456136
+
+[node name="waterfall_004" parent="world-fg/CanvasGroup_003" instance=ExtResource("20_hcf2l")]
+position = Vector2(0, -380)
+scale = Vector2(4, 4)
+frame_progress = 0.464352
+
+[node name="waterfall_005" parent="world-fg/CanvasGroup_003" instance=ExtResource("20_hcf2l")]
+position = Vector2(0, -828)
+scale = Vector2(4, 4)
+frame_progress = 0.464352
+
+[node name="rainywatertop" parent="world-fg/CanvasGroup_003" instance=ExtResource("19_0sl8b")]
+position = Vector2(0, 1329)
+scale = Vector2(0.5, 0.5)
+frame_progress = 0.882582
+
+[node name="CanvasGroup_006" type="Node2D" parent="world-fg"]
+
+[node name="DustLightTexture_000" type="Sprite2D" parent="world-fg/CanvasGroup_006"]
+modulate = Color(0.5, 0.5, 0.5, 1)
+light_mask = 4
+material = ExtResource("31_tly4q")
+position = Vector2(1800, -3128)
+texture = ExtResource("30_lstfi")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(1.1, 1)
+
+[node name="DustLightTexture_001" type="Sprite2D" parent="world-fg/CanvasGroup_006"]
+modulate = Color(0.5, 0.5, 0.5, 1)
+light_mask = 4
+material = ExtResource("31_tly4q")
+position = Vector2(8160, -3988)
+texture = ExtResource("30_lstfi")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(1.01, 1)
+
+[node name="DustLightTexture_002" type="Sprite2D" parent="world-fg/CanvasGroup_006"]
+modulate = Color(0.5, 0.5, 0.5, 1)
+light_mask = 4
+material = ExtResource("31_tly4q")
+position = Vector2(2772, -3128)
+texture = ExtResource("30_lstfi")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(1.1, 1)
+
+[node name="CanvasGroup_005" type="CanvasGroup" parent="world-fg"]
+
+[node name="InnerworksTrapdoor00060" type="Sprite2D" parent="world-fg/CanvasGroup_005"]
+position = Vector2(1848, -3368)
+texture = ExtResource("27_471r4")
+flip_v = true
+
+[node name="InnerworksTrapdoor00061" type="Sprite2D" parent="world-fg/CanvasGroup_005"]
+position = Vector2(1649.5, -2857.5)
+texture = ExtResource("27_471r4")
+
+[node name="InnerworksTrapdoor00062" type="Sprite2D" parent="world-fg/CanvasGroup_005"]
+position = Vector2(1905.5, -2857.5)
+texture = ExtResource("28_471r4")
+
+[node name="InnerworksTrapdoor00063" type="Sprite2D" parent="world-fg/CanvasGroup_005"]
+position = Vector2(2133.5, -2857.5)
+texture = ExtResource("28_471r4")
+
+[node name="InnerworksTrapdoor00064" type="Sprite2D" parent="world-fg/CanvasGroup_005"]
+position = Vector2(2361.5, -2857.5)
+texture = ExtResource("28_471r4")
+
+[node name="InnerworksTrapdoor00065" type="Sprite2D" parent="world-fg/CanvasGroup_005"]
+position = Vector2(2589.5, -2857.5)
+texture = ExtResource("28_471r4")
+
+[node name="CanvasGroup_007" type="CanvasGroup" parent="world-fg"]
+
+[node name="DockArchSmallStrut00011NewAngled00026" type="Sprite2D" parent="world-fg/CanvasGroup_007"]
+position = Vector2(8176, -3984)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("44_vcjie")
+script = ExtResource("31_irc3a")
+scroll_scale = Vector2(1.02, 1)
+
+[node name="DockArchSmallStrut00011NewAngled00021" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(-320, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrut00011NewAngled00022" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(-256, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrut00011NewAngled00023" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(-192, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrut00011NewAngled00024" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(-128, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrut00011NewAngled00025" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(-64, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrut00011NewAngled00027" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(64, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrut00011NewAngled00028" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(128, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrut00011NewAngled00029" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(192, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrut00011NewAngled00030" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(256, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrut00011NewAngled00031" type="Sprite2D" parent="world-fg/CanvasGroup_007/DockArchSmallStrut00011NewAngled00026"]
+position = Vector2(320, 0)
+texture = ExtResource("44_vcjie")
+
+[node name="DockArchSmallStrutIronwork00001HalfThin" type="Sprite2D" parent="world-fg/CanvasGroup_007"]
+position = Vector2(8684, -3984)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("47_2y8bi")
+flip_h = true
+
+[node name="0106_bell_tunnel_01_small" parent="world-fg/CanvasGroup_007" instance=ExtResource("27_vpi0t")]
+position = Vector2(7900, -4228)
+scale = Vector2(2, 2)
+
+[node name="0106_bell_tunnel_01_small2" parent="world-fg/CanvasGroup_007" instance=ExtResource("27_vpi0t")]
+position = Vector2(8460, -4228)
+scale = Vector2(2, 2)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.163513, 0.406281, 0.476463, 1)
+script = ExtResource("6_4n3up")

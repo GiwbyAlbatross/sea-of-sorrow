@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://clvkwmein1ern"]
+
+[ext_resource type="Texture2D" uid="uid://cawu11phdghlu" path="res://assets/Animations/silkfly/shop_lamp_bug0000 #4260522.png" id="1_xdc5o"]
+[ext_resource type="Texture2D" uid="uid://b6rl1wew1svsb" path="res://assets/Animations/silkfly/shop_lamp_bug0001 #4259941.png" id="2_m7bvs"]
+[ext_resource type="Texture2D" uid="uid://owcdnyhq7g6k" path="res://assets/Animations/silkfly/shop_lamp_bug0002 #4260325.png" id="3_lyup6"]
+[ext_resource type="Texture2D" uid="uid://wc4wp1yoh6xp" path="res://assets/Animations/silkfly/shop_lamp_bug0003 #4260007.png" id="4_yyx5e"]
+[ext_resource type="Texture2D" uid="uid://cd7ofgfxi3sjo" path="res://assets/Animations/silkfly/shop_lamp_bug0004 #4259989.png" id="5_i7310"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_012gv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xdc5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m7bvs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lyup6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yyx5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i7310")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="silkfly" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_012gv")
+autoplay = "default"
+frame = 2
+frame_progress = 0.0328851

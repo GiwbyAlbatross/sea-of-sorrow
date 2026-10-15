@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://bo01aevmqp7wc"]
+
+[ext_resource type="Texture2D" uid="uid://cg1nk7njt3q0r" path="res://assets/Images/hornet-arena.png" id="1_kgr2g"]
+[ext_resource type="Texture2D" uid="uid://4i6my2b1iuak" path="res://assets/Particles/spatter_white.png" id="2_ehdms"]
+[ext_resource type="PackedScene" uid="uid://bipmbkbcp4tif" path="res://hornet.tscn" id="2_xhc18"]
+[ext_resource type="AudioStream" uid="uid://85wjrf8gsn5w" path="res://assets/Sounds/Hornet - S45 HORNET-110.wav" id="3_xhc18"]
+[ext_resource type="PackedScene" uid="uid://pjycgg1jhqnf" path="res://fuzzy_stalker.tscn" id="6_6qpxq"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0h0n8"]
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+spread = 180.0
+initial_velocity_min = -537.54
+initial_velocity_max = 435.18
+gravity = Vector3(0, -50, 0)
+scale_min = 0.21
+scale_max = 0.21
+turbulence_enabled = true
+
+[node name="Node2D" type="Node2D"]
+
+[node name="arena" type="StaticBody2D" parent="."]
+
+[node name="bg" type="Sprite2D" parent="arena"]
+position = Vector2(143, 159)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_kgr2g")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="arena/bg"]
+position = Vector2(-422.015, 817.33)
+amount = 64
+texture = ExtResource("2_ehdms")
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_0h0n8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="arena"]
+polygon = PackedVector2Array(-237, -111, -236, 371, 527, 371, 529, 135, 534, 135, 538, 2, 543, -111, -231, -114, -231, -131, 602, -146, 567, 431, -264, 418, -262, -115)
+
+[node name="Label" type="Label" parent="arena"]
+offset_left = -218.0
+offset_top = -49.0
+offset_right = 70.0
+offset_bottom = -26.0
+scale = Vector2(0.4, 0.4)
+text = "It's a screenshot okay leave me alone"
+
+[node name="hornet" parent="." instance=ExtResource("2_xhc18")]
+unique_name_in_owner = true
+position = Vector2(-197, 332)
+
+[node name="OGHornetTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xhc18")
+
+[node name="FuzzyStalker" parent="." instance=ExtResource("6_6qpxq")]
+position = Vector2(207, 351)
+scale = Vector2(0.25, 0.25)

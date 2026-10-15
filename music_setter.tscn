@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jtfgwpteojlt"]
+
+[ext_resource type="Script" uid="uid://cemos4r404bv8" path="res://scripts/music_setter.gd" id="1_y4f8p"]
+
+[node name="MusicSetter" type="Node"]
+script = ExtResource("1_y4f8p")

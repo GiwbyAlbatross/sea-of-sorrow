@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddo78xbhb1380"]
+
+[ext_resource type="PackedScene" uid="uid://2ffpty4qe0h5" path="res://env-objects/water.tscn" id="1_cdmtd"]
+[ext_resource type="Texture2D" uid="uid://bd0kiqnt1gwem" path="res://assets/Images/Environment/SeaOfSorrow/Coral_Stone_0003_pillar_cut.png" id="2_4h6j1"]
+
+[node name="lilrockpool_000" type="StaticBody2D"]
+
+[node name="water_001" parent="." instance=ExtResource("1_cdmtd")]
+offset_left = -237.0
+offset_top = -125.0
+offset_right = 242.0
+offset_bottom = 102.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_4h6j1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-270, -119, -255, -3, -266, 116, 257, 116, 282, -8, 262, -121, 160, -120, 136, -77, -42, -26, -117, -25, -140, -122)

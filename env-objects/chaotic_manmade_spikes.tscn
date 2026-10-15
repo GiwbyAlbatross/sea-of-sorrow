@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://opf7g6wd2cew"]
+
+[ext_resource type="Script" uid="uid://d2g4ktnsniua8" path="res://scripts/damaging_area_2d.gd" id="1_y2352"]
+[ext_resource type="Texture2D" uid="uid://oa40vtuowrql" path="res://assets/Animations/chaoticspikes/ward_bottle_spikes0000.png" id="2_uforn"]
+[ext_resource type="Texture2D" uid="uid://dysfmjjk728g4" path="res://assets/Animations/chaoticspikes/ward_bottle_spikes0001.png" id="3_x2ox2"]
+[ext_resource type="Texture2D" uid="uid://d3imkvxn4kkm" path="res://assets/Animations/chaoticspikes/ward_bottle_spikes0002.png" id="4_18t6n"]
+[ext_resource type="Texture2D" uid="uid://ckgefxoqfdx8q" path="res://assets/Animations/chaoticspikes/ward_bottle_spikes0003.png" id="5_3pjde"]
+[ext_resource type="Texture2D" uid="uid://c0qica1da5w75" path="res://assets/Animations/chaoticspikes/ward_bottle_spikes0004.png" id="6_uuetl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_533fm"]
+animations = [{
+"frames": [{
+"duration": 18.0,
+"texture": ExtResource("2_uforn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x2ox2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_18t6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3pjde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uuetl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_re8hn"]
+size = Vector2(300, 58)
+
+[node name="ChaoticManmadeSpikes (DamagingArea2D)" type="Area2D"]
+editor_description = "DamagingArea2D"
+collision_layer = 3
+collision_mask = 2
+script = ExtResource("1_y2352")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_533fm")
+autoplay = "default"
+frame_progress = 0.96479
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_re8hn")

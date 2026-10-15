@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxsprkc5golna"]
+
+[ext_resource type="Texture2D" uid="uid://cvxgqmi03dvn5" path="res://assets/Images/Environment/SeaOfSorrow/pink-coral_set_0001_1_mid_back.png" id="1_e6im8"]
+
+[node name="PinkCoralBlob" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_e6im8")
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-280, 81, 304, 28, 287, -18, 106, -76, -206, -62)

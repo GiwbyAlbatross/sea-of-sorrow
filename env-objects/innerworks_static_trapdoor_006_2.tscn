@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6wce8i8rk4fm"]
+
+[ext_resource type="Texture2D" uid="uid://iabtdx1ys67s" path="res://assets/Images/Environment/SeaOfSorrow-civilised/innerworks_trapdoor_0006_2.png" id="1_yyq4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ooeq"]
+size = Vector2(242, 57)
+
+[node name="innerworks_trapdoor_006_2_STATIC" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yyq4f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3.5)
+shape = SubResource("RectangleShape2D_1ooeq")

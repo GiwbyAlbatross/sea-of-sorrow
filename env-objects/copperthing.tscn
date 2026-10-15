@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4fgxrss7uj80"]
+
+[ext_resource type="Texture2D" uid="uid://bw2mrd8kq00rr" path="res://assets/Images/Environment/SeaOfSorrow-civilised/copperthing.png" id="1_mjr5s"]
+
+[node name="copperthing" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mjr5s")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(167, -56, 167, -11, 163, -2, 140, 4, 114, 33, 116, 39, 112, 56, 0, 56, -172, 56, -172, -56)

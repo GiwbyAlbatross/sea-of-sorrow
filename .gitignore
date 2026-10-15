@@ -1,0 +1,12 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# macos bs
+._*
+*.DS_Store
+
+# builds
+run-*
+build/
+*.exe

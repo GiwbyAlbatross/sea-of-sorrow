@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b204bq0sekjei"]
+
+[ext_resource type="Texture2D" uid="uid://30jr2yy2pbf7" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Hornet_Core__0106_bell_tunnel_01_small_break_bridge.png" id="1_cw5ds"]
+[ext_resource type="Texture2D" uid="uid://cdq41ldib7tmf" path="res://assets/Images/Environment/SeaOfSorrow-civilised/Hornet_Core__0106_bell_tunnel_01_small_broken.png" id="2_rva78"]
+
+[node name="tablething_collision" type="StaticBody2D"]
+
+[node name="HornetCore0106BellTunnel01SmallBreakBridge2" type="Sprite2D" parent="."]
+position = Vector2(196, 20)
+texture = ExtResource("1_cw5ds")
+
+[node name="HornetCore0106BellTunnel01SmallBreakBridge" type="Sprite2D" parent="."]
+position = Vector2(-196, 20)
+texture = ExtResource("1_cw5ds")
+flip_h = true
+
+[node name="HornetCore0106BellTunnel01SmallBroken" type="Sprite2D" parent="."]
+texture = ExtResource("2_rva78")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-248, -20, -212, 60, -148, 60, -148, 20, 144, 20, 144, 60, 212, 60, 248, -20)
