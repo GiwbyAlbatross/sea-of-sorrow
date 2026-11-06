@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasItem
 
 @export var ingame_visible: bool
 

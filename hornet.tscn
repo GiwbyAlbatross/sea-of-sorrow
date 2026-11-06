@@ -1,4 +1,4 @@
-[gd_scene load_steps=344 format=3 uid="uid://bipmbkbcp4tif"]
+[gd_scene load_steps=348 format=3 uid="uid://bipmbkbcp4tif"]
 
 [ext_resource type="Script" uid="uid://b1uueib43j2w0" path="res://scripts/hornet.gd" id="1_fffpd"]
 [ext_resource type="Texture2D" uid="uid://6i1qlf2m7wtm" path="res://assets/Animations/Player/Cure/0.png" id="2_gcbpj"]
@@ -217,9 +217,13 @@
 [ext_resource type="Texture2D" uid="uid://biaihrlhvkd8o" path="res://assets/Animations/Player/RushJump/12.png" id="213_84tj4"]
 [ext_resource type="Texture2D" uid="uid://cgikpbwqalsro" path="res://assets/Animations/Player/CloseDisSkill/1.png" id="214_uegcj"]
 [ext_resource type="Texture2D" uid="uid://d2c3y1o1qvjsv" path="res://assets/Animations/Player/CloseDisSkill/2.png" id="215_at1k1"]
+[ext_resource type="Texture2D" uid="uid://doyiwoficn6mi" path="res://assets/Animations/Player/SwimDown/hornet_last_dive_kick0000.png" id="216_dvxab"]
 [ext_resource type="Texture2D" uid="uid://qjeeuq2tquod" path="res://assets/Animations/Player/CloseDisSkill/3.png" id="216_yrt8h"]
 [ext_resource type="Texture2D" uid="uid://j12jbk0jaw5a" path="res://assets/Animations/Player/CloseDisSkill/4.png" id="217_4qxt5"]
+[ext_resource type="Texture2D" uid="uid://br5y56irpkmjh" path="res://assets/Animations/Player/SwimDown/hornet_last_dive_kick0001.png" id="217_rbupm"]
+[ext_resource type="Texture2D" uid="uid://cw23tuq3qe8vy" path="res://assets/Animations/Player/SwimDown/hornet_last_dive_kick0002.png" id="218_kyfkd"]
 [ext_resource type="Texture2D" uid="uid://ctp7htv77niwn" path="res://assets/Animations/Player/CloseDisSkill/5.png" id="218_txng0"]
+[ext_resource type="Texture2D" uid="uid://bqnq0imh7kqjn" path="res://assets/Animations/Player/SwimDown/hornet_last_dive_kick0003.png" id="219_exa40"]
 [ext_resource type="Texture2D" uid="uid://dps5kegpvopu5" path="res://assets/Animations/Player/CloseDisSkill/6.png" id="219_npjls"]
 [ext_resource type="Texture2D" uid="uid://ct227qghdjeg1" path="res://assets/Animations/Player/CloseDisSkill/7.png" id="220_kvhq0"]
 [ext_resource type="Texture2D" uid="uid://bj6kqip5bpf5k" path="res://assets/Animations/Player/CloseDisSkill/8.png" id="221_nwcnk"]
@@ -1266,6 +1270,23 @@ animations = [{
 }],
 "loop": false,
 "name": &"sprint-jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("216_dvxab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_rbupm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_kyfkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_exa40")
+}],
+"loop": true,
+"name": &"swim_down",
 "speed": 15.0
 }, {
 "frames": [{

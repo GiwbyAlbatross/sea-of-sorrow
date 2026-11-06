@@ -1,0 +1,502 @@
+[gd_scene load_steps=71 format=3 uid="uid://b4can8llo3i05"]
+
+[ext_resource type="Script" uid="uid://dob0xxstp8xrv" path="res://scripts/hornet_underwater.gd" id="1_us5vp"]
+[ext_resource type="Texture2D" uid="uid://doyiwoficn6mi" path="res://assets/Animations/Player/SwimDown/hornet_last_dive_kick0000.png" id="216_0t0h4"]
+[ext_resource type="Texture2D" uid="uid://br5y56irpkmjh" path="res://assets/Animations/Player/SwimDown/hornet_last_dive_kick0001.png" id="217_s7hdu"]
+[ext_resource type="Texture2D" uid="uid://cw23tuq3qe8vy" path="res://assets/Animations/Player/SwimDown/hornet_last_dive_kick0002.png" id="218_pxpwg"]
+[ext_resource type="Texture2D" uid="uid://bqnq0imh7kqjn" path="res://assets/Animations/Player/SwimDown/hornet_last_dive_kick0003.png" id="219_q4eoq"]
+[ext_resource type="Script" uid="uid://dyt4oth7d4h7w" path="res://scripts/camera_smoothing.gd" id="259_etvmd"]
+[ext_resource type="Texture2D" uid="uid://dxhs3rudkvqhg" path="res://assets/Images/vignette_low_health_quarter.png" id="260_t6a11"]
+[ext_resource type="Texture2D" uid="uid://bq0yhf7xyyk8c" path="res://assets/Images/UI/HUD sprites - atlas0 #40694.png" id="261_tfx27"]
+[ext_resource type="Texture2D" uid="uid://bj7bkx7yc607h" path="res://assets/Images/UI/empty-mask.png" id="262_hr7di"]
+[ext_resource type="Texture2D" uid="uid://b6x2esx3srs71" path="res://assets/Images/UI/full-mask.png" id="263_k4bfv"]
+[ext_resource type="Script" uid="uid://dtjdaqe7vmij7" path="res://scripts/healthbar.gd" id="264_ee1f0"]
+[ext_resource type="Texture2D" uid="uid://bjmtxa5p1mdmw" path="res://assets/Images/UI/ins_3.png" id="265_ti1sj"]
+[ext_resource type="Material" uid="uid://ci2lqkt3nwip2" path="res://unshaded.material" id="266_ymml6"]
+[ext_resource type="FontFile" uid="uid://ba5jlr30njkft" path="res://assets/TrajanPro.ttf" id="267_axia6"]
+[ext_resource type="Script" uid="uid://ds1e52viowjac" path="res://scripts/fpscounter.gd" id="268_eon7c"]
+[ext_resource type="Shader" uid="uid://b28ycnrtiwwy5" path="res://scripts/underwater.gdshader" id="269_us5vp"]
+[ext_resource type="Shader" uid="uid://d18xfgglwggwv" path="res://scripts/softedges.gdshader" id="270_xb7dd"]
+[ext_resource type="Texture2D" uid="uid://7jhd7ulnidbt" path="res://assets/Images/prompt_idle0000.png" id="271_b3iel"]
+[ext_resource type="Script" uid="uid://g18r6hhk1emd" path="res://scripts/dialogue_label.gd" id="272_sdp3r"]
+[ext_resource type="Script" uid="uid://ceg7bc17fbjj0" path="res://scripts/visible_setter_onload.gd" id="273_qixvw"]
+[ext_resource type="Texture2D" uid="uid://befji8ehn8k" path="res://assets/Images/grimm_fader.png" id="274_hfmif"]
+[ext_resource type="AudioStream" uid="uid://c7j5swnl537vl" path="res://assets/Sounds/Player/voice_cure.mp3" id="275_iqpif"]
+[ext_resource type="Script" uid="uid://bgd4emq5fk7gf" path="res://scripts/soundmngr.gd" id="276_p4o3v"]
+[ext_resource type="AudioStream" uid="uid://cm1g18cjth66t" path="res://assets/Sounds/Player/voice_closeskill_0.MP3" id="277_pgaae"]
+[ext_resource type="AudioStream" uid="uid://j8wtnr7as7iu" path="res://assets/Sounds/Player/Hornet_Dialogue_Generic_03.wav" id="278_sj6qy"]
+[ext_resource type="AudioStream" uid="uid://kc8rwt4lnerg" path="res://assets/Sounds/Player/bind1.wav" id="279_45py8"]
+[ext_resource type="AudioStream" uid="uid://ctmrxrh321j5e" path="res://assets/Sounds/Player/voice_die.mp3" id="280_ql17s"]
+[ext_resource type="AudioStream" uid="uid://cojx3k3hyradx" path="res://assets/Sounds/Player/voice_closeskill_1.MP3" id="281_ytutt"]
+[ext_resource type="AudioStream" uid="uid://bn21wlrd5f87b" path="res://assets/Sounds/Player/voice_remoteskill_0.MP3" id="282_ddufv"]
+[ext_resource type="AudioStream" uid="uid://crcj8jmimfeyw" path="res://assets/Sounds/Player/Hornet_Fight_Laugh_01.wav" id="283_il6eg"]
+[ext_resource type="AudioStream" uid="uid://qaqs85v5roaj" path="res://assets/Sounds/Player/Hornet_Fight_Laugh_02.wav" id="284_qh1ov"]
+[ext_resource type="AudioStream" uid="uid://dsl5jsajkged5" path="res://assets/Sounds/Player/Hornet_Dialogue_Generic_02.wav" id="285_3ren6"]
+[ext_resource type="AudioStream" uid="uid://cmhj5jvq6qo4b" path="res://assets/Sounds/Player/voice_throw.MP3" id="286_yvsre"]
+[ext_resource type="AudioStream" uid="uid://dy4lhawe763qn" path="res://assets/Sounds/Player/voice_jump_0.MP3" id="287_iq6u3"]
+[ext_resource type="AudioStream" uid="uid://bts5dkd26jtry" path="res://assets/Sounds/Player/voice_jump_1.MP3" id="288_50a1x"]
+[ext_resource type="AudioStream" uid="uid://cdg000fmey605" path="res://assets/Sounds/Player/voice_jump_2.MP3" id="289_3wg1s"]
+[ext_resource type="AudioStream" uid="uid://c5jtxkecamv0b" path="res://assets/Sounds/Player/Hornet_Dialogue_Generic_05.wav" id="290_s24om"]
+[ext_resource type="AudioStream" uid="uid://f8ctfvnelpvq" path="res://assets/Sounds/Player/voice_remoteskill_1.MP3" id="291_7eqxe"]
+[ext_resource type="AudioStream" uid="uid://dsyngicqsh8ti" path="res://assets/Sounds/Player/Hornet_Dialogue_Generic_04.wav" id="292_ausua"]
+[ext_resource type="AudioStream" uid="uid://demddliw13d6f" path="res://assets/Sounds/NightMare/sword_0.mp3" id="293_2cwlc"]
+[ext_resource type="AudioStream" uid="uid://wwqsymbw0ebj" path="res://assets/Sounds/Player/sound_cure.mp3" id="294_x4r0j"]
+[ext_resource type="AudioStream" uid="uid://cm63e8h6l4jd8" path="res://assets/Sounds/Player/hurt.mp3" id="295_wbdha"]
+[ext_resource type="AudioStream" uid="uid://cv4fp4fmkk76f" path="res://assets/Sounds/Player/waterland.mp3" id="296_m1rc8"]
+[ext_resource type="AudioStream" uid="uid://coimfckcv1l82" path="res://assets/Sounds/Player/waterwalk.mp3" id="297_0xny0"]
+[ext_resource type="AudioStream" uid="uid://cbak7u2kyyqps" path="res://assets/Sounds/Player/sound_closeskill.mp3" id="298_j8cwy"]
+[ext_resource type="Texture2D" uid="uid://beb7j5qh4bjps" path="res://assets/Animations/Player/CloseSkillEffect/0.png" id="299_kydvh"]
+[ext_resource type="Texture2D" uid="uid://42x2jhmtnnta" path="res://assets/Animations/Player/CloseSkillEffect/1.png" id="300_licp3"]
+[ext_resource type="Texture2D" uid="uid://w7vc2s472h7o" path="res://assets/Animations/Player/CloseSkillEffect/2.png" id="301_wuh8n"]
+[ext_resource type="Texture2D" uid="uid://dfv425y4s6ss3" path="res://assets/Animations/Player/CloseSkillEffect/3.png" id="302_b4qnv"]
+[ext_resource type="Texture2D" uid="uid://b3jyua3npr3dw" path="res://assets/Animations/Player/CloseSkillEffect/4.png" id="303_ajavx"]
+[ext_resource type="Texture2D" uid="uid://cg0fi5l2p7fe6" path="res://assets/Animations/Player/CloseSkillEffect/5.png" id="304_xegqb"]
+[ext_resource type="Texture2D" uid="uid://dkcq56w33q2lm" path="res://assets/Animations/Player/CloseSkillEffect/6.png" id="305_fe8d8"]
+[ext_resource type="Texture2D" uid="uid://cdtttdxw2si2b" path="res://assets/Animations/Player/CloseSkillEffect/7.png" id="306_wo233"]
+[ext_resource type="Texture2D" uid="uid://gyxgolvhwxns" path="res://assets/Animations/Player/CloseSkillEffect/8.png" id="307_yhw05"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0tktd"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("216_0t0h4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_s7hdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_pxpwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_q4eoq")
+}],
+"loop": true,
+"name": &"swim_down",
+"speed": 15.0
+}]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0hhvv"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_3f7oh"]
+light_mode = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abcdv"]
+atlas = ExtResource("261_tfx27")
+region = Rect2(1733, 2512, 427, 117)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6wcb"]
+atlas = ExtResource("262_hr7di")
+region = Rect2(0, 0, 360, 87)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_14ttj"]
+atlas = ExtResource("263_k4bfv")
+region = Rect2(0, 0, 360, 82)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofyar"]
+atlas = ExtResource("261_tfx27")
+region = Rect2(1788, 2190, 82, 26)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_us5vp"]
+frequency = 0.0078
+fractal_type = 0
+fractal_octaves = 2
+fractal_lacunarity = 2.145
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ncgny"]
+width = 2048
+height = 1024
+seamless = true
+as_normal_map = true
+bump_strength = 32.0
+noise = SubResource("FastNoiseLite_us5vp")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ncgny"]
+shader = ExtResource("269_us5vp")
+shader_parameter/desat = 0.0
+shader_parameter/warble = SubResource("NoiseTexture2D_ncgny")
+shader_parameter/warble_amount = 0.0093
+shader_parameter/warble_direction = Vector2(0, 0.1)
+shader_parameter/bloomThreshold = 0.545
+shader_parameter/bloom_radius = 4.0
+shader_parameter/bloomIntensity = 1.0
+shader_parameter/bloom2ratio = 4.0
+shader_parameter/bloom_lod_level = 2.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k7ppa"]
+shader = ExtResource("270_xb7dd")
+shader_parameter/soft_edge_size = 0.5
+
+[sub_resource type="Gradient" id="Gradient_frp7y"]
+interpolation_mode = 2
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.138889, 0.170635, 0.72619)
+colors = PackedColorArray(1, 1, 1, 1, 0.594036, 0.594037, 0.594036, 1, 0.55955, 0.55955, 0.55955, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yjv7m"]
+gradient = SubResource("Gradient_frp7y")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3f7oh"]
+size = Vector2(16, 22)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dvxab"]
+radius = 250.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rbupm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("299_kydvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_licp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_wuh8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_b4qnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_ajavx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_xegqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_fe8d8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_wo233")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_yhw05")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_kydvh")
+}],
+"loop": true,
+"name": &"ThreadstormEffect",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="hornet" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+collision_layer = 2
+motion_mode = 1
+wall_min_slide_angle = 0.71733
+floor_max_angle = 1.35612
+script = ExtResource("1_us5vp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -776.0
+offset_top = -474.0
+offset_right = 794.0
+offset_bottom = 434.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+light_mask = 3
+sprite_frames = SubResource("SpriteFrames_0tktd")
+animation = &"swim_down"
+autoplay = "swim_down"
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 36)
+polygon = PackedVector2Array(-32, -22, -4, 54, 14, 44, 44, -14, 36, -58, -14, -54)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -34)
+zoom = Vector2(2.5, 2.5)
+script = ExtResource("259_etvmd")
+smoothing = 50.5
+
+[node name="vignette" type="Node2D" parent="Camera2D"]
+visible = false
+z_index = 4000
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/vignette"]
+material = SubResource("CanvasItemMaterial_0hhvv")
+offset_left = -766.0
+offset_top = -432.0
+offset_right = 770.0
+offset_bottom = 432.0
+color = Color(1, 1, 1, 0.011)
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D/vignette"]
+use_parent_material = true
+position = Vector2(-780, -432)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("260_t6a11")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="Camera2D/vignette"]
+use_parent_material = true
+position = Vector2(-780, 9.15527e-05)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("260_t6a11")
+centered = false
+flip_v = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="Camera2D/vignette"]
+use_parent_material = true
+position = Vector2(0.000183105, -432)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("260_t6a11")
+centered = false
+flip_h = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="Camera2D/vignette"]
+use_parent_material = true
+position = Vector2(6.93889e-18, -8)
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("260_t6a11")
+centered = false
+flip_h = true
+flip_v = true
+
+[node name="hud" type="Node2D" parent="Camera2D"]
+z_index = 4004
+material = SubResource("CanvasItemMaterial_3f7oh")
+position = Vector2(-638, -352)
+scale = Vector2(0.9, 0.9)
+
+[node name="crest" type="Sprite2D" parent="Camera2D/hud"]
+use_parent_material = true
+position = Vector2(110, -2)
+texture = SubResource("AtlasTexture_abcdv")
+
+[node name="health" type="TextureProgressBar" parent="Camera2D/hud"]
+texture_repeat = 2
+use_parent_material = true
+offset_left = 50.0
+offset_top = -38.0
+offset_right = 410.0
+offset_bottom = 49.0
+scale = Vector2(0.75, 0.75)
+max_value = 6.0
+step = 0.5
+value = 6.0
+texture_under = SubResource("AtlasTexture_l6wcb")
+texture_progress = SubResource("AtlasTexture_14ttj")
+script = ExtResource("264_ee1f0")
+
+[node name="silk" type="TextureProgressBar" parent="Camera2D/hud"]
+use_parent_material = true
+offset_left = 28.0
+offset_top = 34.0
+offset_right = 155.0
+offset_bottom = 78.0
+max_value = 1.0
+step = 0.1
+value = 1.0
+allow_greater = true
+texture_under = ExtResource("265_ti1sj")
+texture_progress = SubResource("AtlasTexture_ofyar")
+texture_progress_offset = Vector2(9.196, 10)
+tint_over = Color(1, 1, 1, 0)
+
+[node name="fpscounter" type="Label" parent="Camera2D/hud"]
+material = ExtResource("266_ymml6")
+offset_left = 160.0
+offset_top = 48.8889
+offset_right = 269.0
+offset_bottom = 71.8889
+theme_override_fonts/font = ExtResource("267_axia6")
+text = "FPS: %02.01d"
+script = ExtResource("268_eon7c")
+
+[node name="postproc" type="ColorRect" parent="Camera2D"]
+editor_description = "breaks all my other shaders unfortunately
+TODO: fix tht (duh)"
+visible = false
+z_index = 4096
+material = SubResource("ShaderMaterial_ncgny")
+offset_left = -772.0
+offset_top = -438.0
+offset_right = 776.0
+offset_bottom = 442.0
+script = ExtResource("273_qixvw")
+ingame_visible = true
+
+[node name="dialogue" type="Node2D" parent="Camera2D"]
+visible = false
+z_index = 4044
+position = Vector2(0, -168)
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D/dialogue"]
+material = SubResource("ShaderMaterial_k7ppa")
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -720.0
+offset_top = -60.0
+offset_right = 720.0
+offset_bottom = 16.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 0.054902)
+
+[node name="PromptIdle0000" type="Sprite2D" parent="Camera2D/dialogue"]
+material = ExtResource("266_ymml6")
+texture = ExtResource("271_b3iel")
+
+[node name="Label" type="Label" parent="Camera2D/dialogue"]
+material = ExtResource("266_ymml6")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -28.0
+offset_right = 960.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("267_axia6")
+text = "Come no closer, ghost."
+horizontal_alignment = 1
+script = ExtResource("272_sdp3r")
+
+[node name="gui" type="Node2D" parent="Camera2D"]
+z_index = 4096
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+energy = 0.6
+range_item_cull_mask = 5
+texture = SubResource("GradientTexture2D_yjv7m")
+texture_scale = 10.0
+script = ExtResource("273_qixvw")
+ingame_visible = true
+
+[node name="dustlight" type="PointLight2D" parent="."]
+visible = false
+energy = 16.0
+range_item_cull_mask = 4
+texture = ExtResource("274_hfmif")
+texture_scale = 6.0
+script = ExtResource("273_qixvw")
+ingame_visible = true
+
+[node name="voice" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, -14)
+stream = ExtResource("275_iqpif")
+bus = &"voice"
+script = ExtResource("276_p4o3v")
+sounds = Dictionary[StringName, AudioStream]({
+&"adeno": ExtResource("277_pgaae"),
+&"akana-segamos": ExtResource("278_sj6qy"),
+&"bind": ExtResource("279_45py8"),
+&"die": ExtResource("280_ql17s"),
+&"egale": ExtResource("281_ytutt"),
+&"egalo": ExtResource("281_ytutt"),
+&"exclaim": ExtResource("282_ddufv"),
+&"giggle0": ExtResource("283_il6eg"),
+&"giggle1": ExtResource("284_qh1ov"),
+&"gole-nedosa": ExtResource("285_3ren6"),
+&"huh0": ExtResource("286_yvsre"),
+&"jump0": ExtResource("287_iq6u3"),
+&"jump1": ExtResource("288_50a1x"),
+&"jump2": ExtResource("289_3wg1s"),
+&"la-fenu-feneedle": ExtResource("290_s24om"),
+&"shaw": ExtResource("291_7eqxe"),
+&"un-egale": ExtResource("292_ausua")
+})
+
+[node name="soundfx" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(0, 68)
+max_polyphony = 8
+bus = &"sfx"
+script = ExtResource("276_p4o3v")
+sounds = Dictionary[StringName, AudioStream]({
+&"attack": ExtResource("293_2cwlc"),
+&"bind": ExtResource("294_x4r0j"),
+&"hurt": ExtResource("295_wbdha"),
+&"land": ExtResource("296_m1rc8"),
+&"run": ExtResource("297_0xny0"),
+&"threadstorm": ExtResource("298_j8cwy")
+})
+
+[node name="attacks" type="Node2D" parent="."]
+editor_description = "complete eyesore, still works if `visible` is faise though so leave it like that unless you really need to see it"
+
+[node name="main" type="Area2D" parent="attacks"]
+visible = false
+position = Vector2(0, 18)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="attacks/main"]
+polygon = PackedVector2Array(-34, -84, -32, 42, 90, 48, 158, 34, 172, 14, 156, -34, 96, -60)
+
+[node name="sprint" type="Area2D" parent="attacks"]
+visible = false
+position = Vector2(0, 18)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="attacks/sprint"]
+polygon = PackedVector2Array(-158, -18, -142, 18, 22, 30, 142, 38, 174, -2, 150, -30, 100, -40, 40, -36)
+
+[node name="pogo" type="Area2D" parent="attacks"]
+visible = false
+position = Vector2(0, 18)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="attacks/pogo"]
+polygon = PackedVector2Array(-46, -40, 6, 56, 90, 106, -8, -50)
+
+[node name="up" type="Area2D" parent="attacks"]
+visible = false
+position = Vector2(0, 18)
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="attacks/up"]
+polygon = PackedVector2Array(-80, 48, -68, -78, -24, -186, 0, -202, 26, -184, 48, -118, 60, 52)
+
+[node name="stepdetector" type="Area2D" parent="attacks"]
+visible = false
+position = Vector2(34, 12)
+collision_layer = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attacks/stepdetector"]
+position = Vector2(-4, 0.75)
+shape = SubResource("RectangleShape2D_3f7oh")
+
+[node name="threadstorm" type="Area2D" parent="attacks"]
+collision_layer = 2
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="attacks/threadstorm"]
+visible = false
+shape = SubResource("CircleShape2D_dvxab")
+debug_color = Color(0.982115, 0, 0.365079, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="attacks/threadstorm"]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_rbupm")
+autoplay = "default"

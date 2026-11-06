@@ -1,0 +1,32 @@
+[gd_scene load_steps=16 format=3 uid="uid://jl51tu8ox1kq"]
+
+[ext_resource type="Script" uid="uid://cir3iy24pynga" path="res://scripts/rougelike_generator.gd" id="1_s3f76"]
+[ext_resource type="PackedScene" uid="uid://bu3hm6uuhdx48" path="res://env-objects/0106_bell_tunnel_01_small.tscn" id="2_g11kg"]
+[ext_resource type="PackedScene" uid="uid://bipmbkbcp4tif" path="res://hornet.tscn" id="3_g11kg"]
+[ext_resource type="PackedScene" uid="uid://r6mcw24owmc" path="res://env-objects/civilised-floor.tscn" id="3_yibk5"]
+[ext_resource type="PackedScene" uid="uid://d4fgxrss7uj80" path="res://env-objects/copperthing.tscn" id="4_cnf7t"]
+[ext_resource type="PackedScene" uid="uid://bs8bvh7qxusu3" path="res://env-objects/grand_gallery_0007_1_bath_plat.tscn" id="5_jmkfp"]
+[ext_resource type="PackedScene" uid="uid://b6wce8i8rk4fm" path="res://env-objects/innerworks_static_trapdoor_006_2.tscn" id="6_ibd6l"]
+[ext_resource type="PackedScene" uid="uid://dpie12xredaa" path="res://env-objects/inverse_music_box_reward_pillar_0008.tscn" id="7_jaxgs"]
+[ext_resource type="PackedScene" uid="uid://bkpqvtabg3h1x" path="res://env-objects/random_coral_floor.tscn" id="8_g58dn"]
+[ext_resource type="PackedScene" uid="uid://cd6jlasdrot8b" path="res://env-objects/spiky_platform_large.tscn" id="9_g2bui"]
+[ext_resource type="PackedScene" uid="uid://baryoi4ykabo1" path="res://env-objects/spiky_platform_medium.tscn" id="10_jmffc"]
+[ext_resource type="PackedScene" uid="uid://b7pecs3f3srw7" path="res://env-objects/spiky_platform_small.tscn" id="11_dwyvm"]
+[ext_resource type="PackedScene" uid="uid://bp8k4vusjf2yv" path="res://env-objects/spiky_platform_very_large.tscn" id="12_ac0pk"]
+[ext_resource type="PackedScene" uid="uid://b204bq0sekjei" path="res://env-objects/tablething_collision.tscn" id="13_wrfpx"]
+[ext_resource type="PackedScene" uid="uid://ctpbskd618dwi" path="res://env-objects/triplefloor.tscn" id="14_p6idb"]
+
+[node name="rougelike-area" type="Node2D"]
+
+[node name="world-bg" type="Node2D" parent="."]
+script = ExtResource("1_s3f76")
+PLACE_CHANCE = 0.05
+objects = Array[PackedScene]([ExtResource("2_g11kg"), ExtResource("3_yibk5"), ExtResource("4_cnf7t"), ExtResource("5_jmkfp"), ExtResource("6_ibd6l"), ExtResource("7_jaxgs"), ExtResource("8_g58dn"), ExtResource("9_g2bui"), ExtResource("10_jmffc"), ExtResource("11_dwyvm"), ExtResource("12_ac0pk"), ExtResource("13_wrfpx"), ExtResource("14_p6idb")])
+
+[node name="hornet" parent="." instance=ExtResource("3_g11kg")]
+
+[node name="world-fg" type="Node2D" parent="."]
+script = ExtResource("1_s3f76")
+PLACE_CHANCE = 0.045
+seed = 42
+objects = Array[PackedScene]([ExtResource("2_g11kg"), ExtResource("3_yibk5"), ExtResource("4_cnf7t"), ExtResource("5_jmkfp"), ExtResource("6_ibd6l"), ExtResource("7_jaxgs"), ExtResource("8_g58dn"), ExtResource("9_g2bui"), ExtResource("10_jmffc"), ExtResource("11_dwyvm"), ExtResource("12_ac0pk"), ExtResource("13_wrfpx"), ExtResource("14_p6idb")])
