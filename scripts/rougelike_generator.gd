@@ -9,6 +9,8 @@ extends Node2D
 
 @export var objects: Array[PackedScene] = []
 
+@export var respawnpointsetter: PackedScene = preload("res://env-objects/respawn_point_setter_2d.tscn")
+
 var rand: RandomNumberGenerator
 
 var generated_upto = 0.0
@@ -41,6 +43,10 @@ func _place_object_tile(parent: Node2D) -> bool:
 	parent.add_child(child)
 	child.scale *= object_scale
 	child.position = Vector2(rand.randfn(0.0, position_stddev), rand.randfn(0.0, position_stddev))
+	
+	if rand.randf() < 0.5:
+		child.add_child(respawnpointsetter.instantiate())
+	
 	return true
 
 func _physics_process(delta: float) -> void:
