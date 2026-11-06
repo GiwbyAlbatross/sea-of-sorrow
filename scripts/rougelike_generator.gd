@@ -11,6 +11,8 @@ extends Node2D
 
 var rand: RandomNumberGenerator
 
+var generated_upto = 0.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	rand = RandomNumberGenerator.new()
@@ -23,10 +25,11 @@ func _place_tiles(starting_at: int, how_many: int=16) -> void:
 	for y in range(how_many):
 		for x in range(WIDTH):
 			var child = Node2D.new()
-			child.name = "%03d-%03d" % [x,y]
-			child.position = Vector2(x,y) * tile_seperation
+			child.name = "%03d-%03d" % [x,y+starting_at]
+			child.position = Vector2(x,y+starting_at) * tile_seperation
 			add_child(child)
 			_place_object_tile(child)
+			generated_upto = max(generated_upto, child.global_position.y)
 
 func _place_object_tile(parent: Node2D) -> bool:
 	# might add an object under `parent`. returns whether or not it did
@@ -39,3 +42,8 @@ func _place_object_tile(parent: Node2D) -> bool:
 	child.scale *= object_scale
 	child.position = Vector2(rand.randfn(0.0, position_stddev), rand.randfn(0.0, position_stddev))
 	return true
+
+func _physics_process(delta: float) -> void:
+	if GameplayGlobals.hornet_pos.y > (generated_upto-512):
+		_place_tiles(generated_upto / tile_seperation.y) # generate more tiles!
+		print("GENERATING MORE TILES")
